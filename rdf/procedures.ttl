@@ -1,0 +1,25 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <https://schema.org/> .
+@prefix abromics: <https://abromics.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+
+    <1a8bec04-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:Procedure ;
+        
+            sosa:isImplementedBy <1a8be7ae-a0d7-11ef-8bd4-90658429fd42> ; 
+        
+            sosa:isImplementedBy <1a8be7e0-a0d7-11ef-8bd4-90658429fd42> ; 
+        
+        rdfs:label "workflow 1 (genomic)" .

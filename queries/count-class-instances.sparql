@@ -1,0 +1,6 @@
+SELECT ?class (COUNT(?instance) AS ?count)
+WHERE {
+    ?instance a ?class.
+}
+GROUP BY ?class
+ORDER BY DESC(?count)

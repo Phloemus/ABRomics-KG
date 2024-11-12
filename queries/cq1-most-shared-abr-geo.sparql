@@ -1,0 +1,34 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX go: <http://purl.org/obo/owl/GO#>
+PREFIX schema: <https://schema.org/>
+PREFIX abromics: <https://abromics.fr/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# CQ1: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?
+
+SELECT ?sample_id ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {
+    ?sample rdf:type sio:001050 ;
+        schema:identifier ?sample_id ;
+        prov:atLocation ?location .
+
+    ?obs_prop rdf:type sosa:ObservableProperty ;
+        rdfs:label "Resistance gene" . 
+
+    ?observations sosa:hasObservableProperty ?obs_prop ;
+        sosa:hasFeatureOfInterest ?gene ;
+        sosa:hasFeatureOfInterest ?sample .
+
+    ?gene rdf:type go:Gene ;
+        rdfs:label ?gene_name .
+
+    # fetch the id corresponding to the targeted location
+    SERVICE <https://query.wikidata.org/sparql> {
+        ?location rdfs:label ?location_name .
+        FILTER(?location_name = "France" && LANG(?location_name) = "en")
+   }
+} 
+GROUP BY ?sample_id ?gene_name ?location_name
+ORDER BY DESC(?count)
