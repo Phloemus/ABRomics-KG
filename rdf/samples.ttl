@@ -19,1442 +19,2042 @@
 ################################## Samples ####################################
 
 
-    <1a8c0356-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791afc4-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110499" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2011-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0388-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791b370-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19K3" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c03b0-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791b4d8-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-Klo102A" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c03ce-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791b5e6-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP70.28" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1900-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c03ec-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791b712-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110424" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ;
+            prov:generatedAtTime "1992-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c041e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791b82a-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-P1-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0446-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791b924-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-ZW-S17-2-3" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c046e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791ba28-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-ZWS24-1-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0496-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791bc94-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-MOC94-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2018-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8927> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c04b4-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791bdac-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-StiWa-S1-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c04d2-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791bea6-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPe-S1-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c04e6-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791bfa0-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPeP5-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0504-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c072-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP70.24" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1970-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q38> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0522-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c13a-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-HoPe-S30-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0540-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c1f8-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-P4-4" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0554-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c2c0-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-CSP68-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2018-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0572-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c37e-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110434" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1996-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0590-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c482-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-8A-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2018-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c05ae-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c540-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110438" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1994-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c05c2-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c608-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-StiWa-S2-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c05d6-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c6c6-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-65P29" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c05f4-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c784-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-SmaS1-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0612-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c838-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPe-P2-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0630-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c8f6-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19M7" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0644-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791c9aa-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110423" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+            prov:generatedAtTime "1991-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c066c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791ca5e-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-StiWa-S4-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c068a-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791cb12-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HaSW-S1-3" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c069e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791cbda-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-50P73O" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c06b2-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791cc8e-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-S18-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c06c6-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791cd74-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-NWi34" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/10090> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c06e4-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791ce14-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Klo-3-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c06f8-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791cebe-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19M11" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c070c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791cf68-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110431" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+            prov:generatedAtTime "1994-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c072a-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d01c-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP106882" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+            prov:generatedAtTime "1998-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c073e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d0d0-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-Klo1-1-PLG9P835" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2016-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c075c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d184-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-S21-4" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c077a-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d242-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-48P83L-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2018-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c078e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d2ec-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-S16-5" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c07b6-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d38c-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-20A" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c07ca-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d436-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110432" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1994-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c07de-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d4e0-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Eisch21-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c07fc-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d594-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-NCu32R24h" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/10090> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0810-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d63e-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Eisch26-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0838-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d706-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-Klo37-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2016-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c084c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d7ba-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19M15" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0874-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d86e-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110463" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2000-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0888-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d922-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP54.147" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1900-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c08a6-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791d9e0-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-MasT3036T-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2018-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c08ba-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791da94-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-932-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c08ce-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791db3e-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-S21-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c08ec-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791dbe8-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP54.97" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1900-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0900-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791dc88-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110428" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1993-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c091e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791dd32-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110427" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1993-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0932-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791dde6-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-S1-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0946-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791de86-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Eisch20-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c096e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791df3a-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19M16" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c098c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791dfe4-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110436" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+            prov:generatedAtTime "1982-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q55> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c09a0-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e098-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-Zw-LK2-3" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c09be-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e14c-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110429" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1993-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c09dc-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e200-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Klo-71TR-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c09fa-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e2d2-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-ZW-S24-2-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0a0e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e39a-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110425" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1992-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0a2c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e44e-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP53.77" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1953-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0a40-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e50c-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110466" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ;
+            prov:generatedAtTime "2001-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0a54-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e5ca-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-ZWS21-4-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0a72-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e688-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-Pos1016-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2018-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0a90-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e746-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-OBC4-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2018-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0aa4-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e7f0-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPeS16-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0ac2-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e890-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19-A3" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32622> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32622> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0ad6-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e944-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-33-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2016-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0afe-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791e9ee-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-68-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2016-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0b12-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791ea98-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "08-IB3" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2008-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0b26-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791eb92-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-8P826-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0b3a-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791ec50-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-KloGe21-24-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8927> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0b58-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791ecfa-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19K7" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0b80-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791eda4-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-27P47D-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0b94-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e791ee44-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-War16-2B-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0bb2-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7920f46-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19-M22" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0bc6-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79210cc-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-P4-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0bda-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921202-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-Pos108-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/259> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/259> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0bf8-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79212d4-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "14-SPoe1-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2014-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/111917> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0c0c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921388-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19M21" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0c2a-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e792143c-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP70.32" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ;
+            prov:generatedAtTime "1900-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0c3e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921518-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-33P31K1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0c52-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79215c2-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "14-SPoe3-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2014-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/111917> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0c7a-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921676-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-HoPe-P28-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0cac-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e792173e-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19K6" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0cc0-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79217f2-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-CSD76-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2018-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0cd4-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79218a6-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110464" ;
-        obo:RO_0001019 <> ;
+        obo:RO_0002162 <> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ;
+            prov:generatedAtTime "1997-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q55> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0cf2-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921950-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Woeul6" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/111810> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0d06-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921a04-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-P2-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0d24-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921aae-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-33P28K-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0d38-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921b76-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CRBIP17.4" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+            prov:generatedAtTime "2004-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0d4c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921c3e-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110467" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2003-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0d6a-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921cfc-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-81-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2016-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0d88-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921db0-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-28P84D-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0d9c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921e5a-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-S6-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0db0-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921f04-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "14-Fe-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2014-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8782> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0dc4-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7921fae-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110437" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+            prov:generatedAtTime "1993-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0de2-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922058-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110426" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1992-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0df6-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79220f8-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-P2-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0e0a-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79221b6-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-HoPe-S40-3" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0e32-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922256-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-ZW-S21-1-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0e50-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e792230a-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-ODR-Wezyska-12-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8927> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0ea0-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79223b4-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-P12-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0ec8-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922468-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-Zw-LK3-3" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0ee6-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922512-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110435" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+            prov:generatedAtTime "1984-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q55> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0efa-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79225c6-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-TFL22" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/100819> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0f0e-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e792267a-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19M2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0f2c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922742-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPe-P1-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0f40-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e79227ec-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110433" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ;
+            prov:generatedAtTime "1994-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0f54-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922896-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPe-P3-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2017-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0f68-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922954-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-MOC93-1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2018-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0f86-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922a08-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19-M5" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0f9a-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922ab2-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "T20-Cu8" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0fc2-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922b66-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-P2-3" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "environmental" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "2020-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0fe0-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922c1a-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-50P57O-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+            prov:generatedAtTime "2019-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c0ff4-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922cc4-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-932-2" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "animal" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+            prov:generatedAtTime "2015-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina NextSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c1008-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922d78-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP64.1" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+            prov:generatedAtTime "1986-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
 
-    <1a8c101c-a0d7-11ef-8bd4-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <e7922e2c-a1d4-11ef-a413-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "CIP110430" ;
-        obo:RO_0001019 <http://purl.uniprot.org/taxonomy/470> ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/470> ;
         
-        sio:000068 "human" ;
-        prov:wasDerivedFrom <> ;
+            prov:generatedAtTime "1992-11-13T00:00:00Z"^^xsd:dateTime ;
+        
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+
+        
+            prov:wasDerivedFrom <> ;
+        
         uniprot-core:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasGeneratedBy "Illumina HiSeq 2000" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <1a8bec72-a0d7-11ef-8bd4-90658429fd42> . 
+        prov:wasAttributedTo <e79198d6-a1d4-11ef-a413-90658429fd42> . 
