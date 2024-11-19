@@ -17,6 +17,6 @@
 ################################## People #################################
 
 
-    <e79198d6-a1d4-11ef-a413-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <b6bb6d7e-a687-11ef-af16-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "Claudine Médigue" ;
         foaf:mbox <claudine.medigue@france-bioinformatique.fr> .

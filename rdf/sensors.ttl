@@ -19,10 +19,10 @@
 ################################# Sensors ############################################
 
 
-    <e791948a-a1d4-11ef-a413-90658429fd42> rdf:type sosa:Sensor ;
+    <b6bb6810-a687-11ef-af16-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina HiSeq 2000" ;
-        sosa:isHostedBy <e79193f4-a1d4-11ef-a413-90658429fd42> .
+        sosa:isHostedBy <b6bb672a-a687-11ef-af16-90658429fd42> .
 
-    <e79194c6-a1d4-11ef-a413-90658429fd42> rdf:type sosa:Sensor ;
+    <b6bb686a-a687-11ef-af16-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina NextSeq 2000" ;
-        sosa:isHostedBy <e79193f4-a1d4-11ef-a413-90658429fd42> .
+        sosa:isHostedBy <b6bb672a-a687-11ef-af16-90658429fd42> .
