@@ -27,6 +27,12 @@ pip install -r requirements.txt
 ```
 
 ```
+bash 
+## Activate the environment
+source venv/bin/activate
+```
+
+```
 bash
 ## Launch the streamlit app
 streamlit run app.py
