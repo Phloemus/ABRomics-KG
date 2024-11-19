@@ -1,15 +1,15 @@
 # ABRomics-KG
 
-ABRomics-KG is a knowledge graph that allows to store antibiotic resistance data by using the sosa ontology 
-and other domain specific ontologies such as ARO (Antibiotic Resistance Ontology).
+**ABRomics-KG** is a knowledge graph that allows to store antibiotic resistance data by using the sosa ontology 
+and other domain specific ontologies such as **ARO** (Antibiotic Resistance Ontology).
 
 ## Content
 
-In this repo, you will find rdf data and queries used for the article named "A multi-modal and temporal antibiotic resistance knowledge graph" submitted to SWAT4HCLS conference (2025 edition).
+In this repo, you will find [rdf data](https://github.com/Phloemus/ABRomics-KG/tree/main/rdf) and [queries](https://github.com/Phloemus/ABRomics-KG/tree/main/queries) used for the article named *"A multi-modal and temporal antibiotic resistance knowledge graph"* submitted to **SWAT4HCLS** conference (2025 edition).
 
 ## Launch the demo
 
-Along side the rdf graph and queries, you can also explore this graph by yourself !
+Along side the rdf graph and queries, you can also explore this graph locally all by yourself !
 
 ```
 bash
@@ -34,7 +34,7 @@ Within the demo, you can execute the pre-written queries and even perform you ow
 graph although we encourage you to get familiar with the knowledge graph before performing your own sparql
 queries. 
 
-To understand the structure of the graph, go read the reference paper submitted to the SWAT4HCLS conference !
+> [!NOTE] To understand the structure of the graph, go read the reference paper submitted to the SWAT4HCLS conference !
 
 ## Contacts
 
