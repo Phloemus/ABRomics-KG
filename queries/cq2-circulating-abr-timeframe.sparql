@@ -6,12 +6,12 @@ PREFIX go: <http://purl.org/obo/owl/GO#>
 PREFIX schema: <https://schema.org/>
 PREFIX abromics: <https://abromics.fr/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-# What are actively circulating ABR genes, given a specific time-frame and at least two different sample types
+# What are actively circulating ABR genes, given a specific time-frame
 
-SELECT ?gene_name (COUNT(DISTINCT ?sampleType) as ?nb_sample_types) (GROUP_CONCAT(DISTINCT ?sampleType; separator=", ") AS ?sampleTypes) (COUNT(DISTINCT ?res) as ?total_nb_occurences) WHERE {
+SELECT ?gene_name (COUNT(DISTINCT ?res) as ?total_nb_occurences) WHERE {
     ?sample rdf:type sio:001050 ;
-         abromics:sampleType ?sampleType ; # rework this
          prov:generatedAtTime ?collectedDate .
     FILTER (?collectedDate > "2010-10-23T00:00:00Z"^^xsd:dateTime && 
            ?collectedDate < "2024-10-23T00:00:00Z"^^xsd:dateTime)
@@ -20,13 +20,12 @@ SELECT ?gene_name (COUNT(DISTINCT ?sampleType) as ?nb_sample_types) (GROUP_CONCA
          sosa:hasFeatureOfInterest ?gene ;
          sosa:hasFeatureOfInterest ?sample ;
          sosa:hasSimpleResult ?res .
-       
+
    ?obs_prop rdf:type sosa:ObservableProperty ;
          rdfs:label "Resistance gene" .
 
    ?gene rdf:type go:Gene ;
          rdfs:label ?gene_name .
 } 
-GROUP BY ?gene_name ?resValue
-HAVING (COUNT(DISTINCT ?sampleType) > 1)
+GROUP BY ?gene_name ?res
 ORDER BY DESC(?total_nb_occurences)
