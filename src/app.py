@@ -8,10 +8,9 @@ import time
 
 #### Page configuration
 st.set_page_config(
-    page_title="ABRomics-KG",
-    layout="centered",
-    initial_sidebar_state="collapsed"
+    page_title="ABRomics-KG", layout="centered", initial_sidebar_state="collapsed"
 )
+
 
 #### Methods
 def readJsonFromFile(path):
@@ -19,43 +18,44 @@ def readJsonFromFile(path):
         d = json.load(f)
         return d
 
+
 #### Constants #########################################################################################################
 countries = readJsonFromFile("data/countries.json")
 
 
 #### States ############################################################################################################
 
-if 'is_exec_countqry' not in st.session_state:
+if "is_exec_countqry" not in st.session_state:
     st.session_state.is_exec_countqry = False
 
-if 'df_res_countqry' not in st.session_state:
+if "df_res_countqry" not in st.session_state:
     st.session_state.df_res_countqry = ""
 
-if 'is_exec_qry1' not in st.session_state:
+if "is_exec_qry1" not in st.session_state:
     st.session_state.is_exec_qry1 = False
 
-if 'df_res_qry1' not in st.session_state:
+if "df_res_qry1" not in st.session_state:
     st.session_state.df_res_qry1 = ""
 
-if 'country' not in st.session_state:
+if "country" not in st.session_state:
     st.session_state.country = "France"
 
-if 'is_exec_qry2' not in st.session_state:
+if "is_exec_qry2" not in st.session_state:
     st.session_state.is_exec_qry2 = False
 
-if 'startTime' not in st.session_state:
+if "startTime" not in st.session_state:
     st.session_state.startTime = datetime.date(2010, 7, 6)
 
-if 'endTime' not in st.session_state:
+if "endTime" not in st.session_state:
     st.session_state.endTime = datetime.date(2019, 7, 6)
 
-if 'df_res_qry2' not in st.session_state:
+if "df_res_qry2" not in st.session_state:
     st.session_state.df_res_qry2 = ""
 
-if 'is_exec_customqry' not in st.session_state:
+if "is_exec_customqry" not in st.session_state:
     st.session_state.is_exec_customqry = False
 
-if 'df_res_customqry' not in st.session_state:
+if "df_res_customqry" not in st.session_state:
     st.session_state.df_res_customqry = ""
 
 #### Queries ###########################################################################################################
@@ -67,7 +67,8 @@ countquery = f"""
     }}
 """
 
-query1 = f"""
+query1 = (
+    f"""
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -102,7 +103,9 @@ query1 = f"""
     }}
     GROUP BY ?sample_id ?gene_name ?location_name
     ORDER BY DESC(?count)
-""" % st.session_state.country
+"""
+    % st.session_state.country
+)
 
 query2 = f"""
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -146,15 +149,18 @@ def exec_count_qry():
     st.session_state.df_res_countqry = results
     st.session_state.is_exec_countqry = not st.session_state.is_exec_countqry
 
+
 def exec_qry1():
     results = graph.query(query1)
     st.session_state.df_res_qry1 = results
     st.session_state.is_exec_qry1 = not st.session_state.is_exec_qry1
 
+
 def exec_qry2():
     results = graph.query(query2)
     st.session_state.df_res_qry2 = results
     st.session_state.is_exec_qry2 = not st.session_state.is_exec_qry2
+
 
 def exec_customqry():
     results = graph.query(customquery)
@@ -163,20 +169,30 @@ def exec_customqry():
 
 
 #### Load Graph ########################################################################################################
-graph = rdflib.Graph()
 
-rdfDir = "../rdf"
 
-for fileName in os.listdir(rdfDir):
-    graph.parse(f"{rdfDir}/{fileName}", format="ttl")
+@st.cache_data(persist="disk")
+def load_graph():
+    graph = rdflib.Graph()
+    rdfDir = "../rdf"
+    for fileName in os.listdir(rdfDir):
+        graph.parse(f"{rdfDir}/{fileName}", format="ttl")
+    print(f"loaded {len(graph)} triples")
+    return graph
+
+
+graph = load_graph()
 
 
 #### Rendered Content ##################################################################################################
-st.info("Check the [reference article]() and the [documentation](https://github.com/Phloemus/ABRomics-KG) of the project")
+st.info(
+    "Check the [reference article]() and the [documentation](https://github.com/Phloemus/ABRomics-KG) of the project"
+)
 
 st.title("A multi-modal and temporal antibiotic resistance knowledge graph")
 
-st.markdown("""Understanding how antibiotic resistance genes spread is essential for protecting human, animal, and
+st.markdown(
+    """Understanding how antibiotic resistance genes spread is essential for protecting human, animal, and
 environmental health. It requires collaboration across multiple fields and expertise under One Health
 initiatives, emphasizing the pressing need to consolidate diverse antibiotic data from human, animal, and
 environmental samples. In this paper, we propose a domain-specific Knowledge Graph leveraging the
@@ -184,26 +200,30 @@ SOSA ontology to uniformly represent multi-modal data and their analysis while a
 of provenance metadata covering both time and geographical locations. This work is driven by a national
 consortium of antibiotic resistance experts (ABRomics). As experimental results, we show how this
 domain knowledge can be used to answer a specific expert question as well as increasing the FAIRness
-of antibiotic resistance data.""")
+of antibiotic resistance data."""
+)
 
 st.subheader("Summary")
-st.markdown('''
+st.markdown(
+    """
     1. Knowledge graph structure
     2. Execute prewritten queries
     3. Perform custom queries
-''')
+"""
+)
 
 st.markdown("")
 
 st.header("1. Knowedge graph structure")
 
 
-
 st.header("2. Execute prewritten queries")
 
-st.markdown(f"""The SPARQL request corresponding to the competency question of the reference paper can be executed
+st.markdown(
+    f"""The SPARQL request corresponding to the competency question of the reference paper can be executed
                 below on you the local graph containing the data. SPARQL requests corresponding to other competency 
-                questions can also be performed in the graph by using this demo.""")
+                questions can also be performed in the graph by using this demo."""
+)
 
 ### Count query #######################################################################################################
 
@@ -211,47 +231,69 @@ st.subheader("Exploration request")
 
 st.markdown(f"Count the number of nodes in the local knowledge graph")
 
-st.button("Execute query", on_click=exec_count_qry, key=0, type="primary", disabled=False, use_container_width=False)
+st.button(
+    "Execute query",
+    on_click=exec_count_qry,
+    key=0,
+    type="primary",
+    disabled=False,
+    use_container_width=False,
+)
 
 qryTab1, qryTab2 = st.tabs(["Sparql query", "Result table"])
 
 with qryTab1:
-    st.markdown(f"This SPARQL query allows to get the number of nodes present in the graph")
-    st.code(countquery , language="sparql", line_numbers=False)
+    st.markdown(
+        f"This SPARQL query allows to get the number of nodes present in the graph"
+    )
+    st.code(countquery, language="sparql", line_numbers=False)
 
 with qryTab2:
     if st.session_state.is_exec_countqry:
-        with st.spinner('Wait for it...'):
+        with st.spinner("Wait for it..."):
             time.sleep(2)
-        st.success('Query performed correctly !')
+        st.success("Query performed correctly !")
         print(st.session_state.df_res_countqry)
         st.table(st.session_state.df_res_countqry)
     else:
         st.markdown("Execute the request to see the results !")
 
 
-
-
 ### Query 1 ############################################################################################################
 
-st.subheader("CQ1: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?")
+st.subheader(
+    "CQ1: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?"
+)
 
 st.markdown(f"Find the gene names present in a specific geographical region")
 
-st.selectbox("Indicate the counrty you want to search resistances genes", countries, key="country") # the key is auto-mapped to the st.session_state.key by streamlit 
-st.button("Execute query", on_click=exec_qry1, key=1, type="primary", disabled=False, use_container_width=False)
+st.selectbox(
+    "Indicate the counrty you want to search resistances genes",
+    countries,
+    key="country",
+)  # the key is auto-mapped to the st.session_state.key by streamlit
+st.button(
+    "Execute query",
+    on_click=exec_qry1,
+    key=1,
+    type="primary",
+    disabled=False,
+    use_container_width=False,
+)
 
 qryTab1, qryTab2 = st.tabs(["Sparql query", "Result table"])
 
 with qryTab1:
-    st.markdown(f"This SPARQL query allows to get all the antibiotic resistance genes found in sample collected in {st.session_state.country}")
+    st.markdown(
+        f"This SPARQL query allows to get all the antibiotic resistance genes found in sample collected in {st.session_state.country}"
+    )
     st.code(query1, language="sparql", line_numbers=False)
 
 with qryTab2:
     if st.session_state.is_exec_qry1:
-        with st.spinner('Wait for it...'):
+        with st.spinner("Wait for it..."):
             time.sleep(2)
-        st.success('Query performed correctly !')
+        st.success("Query performed correctly !")
         print(st.session_state.df_res_qry1)
         st.table(st.session_state.df_res_qry1)
     else:
@@ -259,7 +301,9 @@ with qryTab2:
 
 ### Query 2 ############################################################################################################
 
-st.subheader("CQ2: What are actively circulating ABR genes, given a specific time-frame and at least two different sample types")
+st.subheader(
+    "CQ2: What are actively circulating ABR genes, given a specific time-frame and at least two different sample types"
+)
 
 st.markdown(f"Find the actively circulating resistance genes in a specific time-frame")
 
@@ -273,19 +317,31 @@ with col2:
 
 st.write("Samples from ", start, " to ", end)
 
-st.button("Execute query", on_click=exec_qry2, key=2, type="primary", disabled=False, use_container_width=False)
+st.button(
+    "Execute query",
+    on_click=exec_qry2,
+    key=2,
+    type="primary",
+    disabled=False,
+    use_container_width=False,
+)
 
 qryTab1, qryTab2 = st.tabs(["Sparql query", "Result table"])
 
 with qryTab1:
-    st.write(f"This SPARQL query allows to get the resistance genes found in samples collected between the ", st.session_state.startTime, " and the ", st.session_state.endTime)
+    st.write(
+        f"This SPARQL query allows to get the resistance genes found in samples collected between the ",
+        st.session_state.startTime,
+        " and the ",
+        st.session_state.endTime,
+    )
     st.code(query2, language="sparql", line_numbers=False)
 
 with qryTab2:
     if st.session_state.is_exec_qry2:
-        with st.spinner('Wait for it...'):
+        with st.spinner("Wait for it..."):
             time.sleep(2)
-        st.success('Query performed correctly !')
+        st.success("Query performed correctly !")
         print(st.session_state.df_res_qry2)
         st.table(st.session_state.df_res_qry2)
     else:
@@ -297,18 +353,24 @@ st.header("3. Perform custom queries")
 qryTab1, qryTab2 = st.tabs(["Custom SPARQL query", "Query preview"])
 
 with qryTab1:
-    customquery= st.text_area("Edit you SPARQL query", value="", height=400) 
+    customquery = st.text_area("Edit you SPARQL query", value="", height=400)
 
 with qryTab2:
     st.markdown("Preview of your custom SPARQL query")
     st.code(customquery, language="sparql", line_numbers=False)
 
-st.button("Execute query", on_click=exec_customqry, key=3, type="primary", disabled=False, use_container_width=False)
+st.button(
+    "Execute query",
+    on_click=exec_customqry,
+    key=3,
+    type="primary",
+    disabled=False,
+    use_container_width=False,
+)
 
 if st.session_state.is_exec_customqry:
-    with st.spinner('Wait for it...'):
+    with st.spinner("Wait for it..."):
         time.sleep(2)
-    st.success('Query performed correctly !')
+    st.success("Query performed correctly !")
     print(st.session_state.df_res_customqry)
     st.table(st.session_state.df_res_customqry)
-
