@@ -18,9 +18,11 @@ git clone https://github.com/Phloemus/ABRomics-KG
 cd ABRomics-KG
 ```
 
+### Using venv or conda as the python environment
+
 ```
 bash
-## Create the provided python environment
+## Create a venv environment
 cd src
 python -m venv ./venv
 source venv/bin/activate
@@ -28,10 +30,22 @@ source venv/bin/activate
 
 ```
 bash
+## Create a conda environment
+cd src
+conda create --name abromics-kg
+conda activate abromics-kg
+```
+
+### Installing the required packages for the demo
+
+```
+bash
 ## Install the required packages
 pip install streamlit
 pip install rdflib
 ```
+
+### Launching the demo
 
 ```
 bash

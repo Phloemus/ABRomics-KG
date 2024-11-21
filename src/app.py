@@ -207,7 +207,7 @@ st.subheader("Summary")
 st.markdown(
     """
     1. Knowledge graph structure
-    2. Execute prewritten queries
+    2. Execute demo queries
     3. Perform custom queries
 """
 )
@@ -217,7 +217,7 @@ st.markdown("")
 st.header("1. Knowedge graph structure")
 
 
-st.header("2. Execute prewritten queries")
+st.header("2. Execute demo queries")
 
 st.markdown(
     f"""The SPARQL request corresponding to the competency question of the reference paper can be executed
