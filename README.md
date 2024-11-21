@@ -24,7 +24,13 @@ bash
 cd src
 python -m venv ./venv
 source venv/bin/activate
-pip install -r requirements.txt
+```
+
+```
+bash
+## Install the required packages
+pip install streamlit
+pip install rdflib
 ```
 
 ```
