@@ -23,13 +23,8 @@ bash
 ## Create the provided python environment
 cd src
 python -m venv ./venv
-pip install -r requirements.txt
-```
-
-```
-bash 
-## Activate the environment
 source venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ```
