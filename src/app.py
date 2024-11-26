@@ -58,13 +58,29 @@ if "is_exec_customqry" not in st.session_state:
 if "df_res_customqry" not in st.session_state:
     st.session_state.df_res_customqry = ""
 
+
+if "is_exec_wikidatahealthqry" not in st.session_state:
+    st.session_state.is_exec_wikidatahealthqry = False
+
+if "df_res_wikidatahealthqry" not in st.session_state:
+    st.session_state.df_res_wikidatahealthqry = ""
+
+
 #### Queries ###########################################################################################################
 
-countquery = f"""
-    SELECT (COUNT(*) AS ?tripleCount)
+countquery = f"""SELECT (COUNT(*) AS ?tripleCount)
+WHERE {{
+    ?subject ?predicate ?object.
+}}
+"""
+
+wikidataHealthQuery = f"""
+    SELECT (COUNT(*) AS ?ping) 
     WHERE {{
-        ?subject ?predicate ?object.
-    }}
+        SERVICE <https://query.wikidata.org/sparql> {{
+            ?s ?p ?o.
+        }} 
+    }} 
 """
 
 query1 = (
@@ -124,7 +140,7 @@ query2 = f"""
              abromics:sampleType ?sampleType ; # rework this
              prov:generatedAtTime ?collectedDate .
         FILTER (?collectedDate > "{st.session_state.startTime}T00:00:00Z"^^xsd:dateTime && 
-               ?collectedDate < "{st.session_state.endTime}T00:00:00Z"^^xsd:dateTime)
+           ?collectedDate < "{st.session_state.endTime}T00:00:00Z"^^xsd:dateTime)
     
        ?observations sosa:hasObservableProperty ?obs_prop ;
              sosa:hasFeatureOfInterest ?gene ;
@@ -168,6 +184,13 @@ def exec_customqry():
     st.session_state.is_exec_customqry = not st.session_state.is_exec_customqry
 
 
+## impossible to perform a federeated query with rdflib
+def exec_wikidatahealthqry():
+    results = graph.query(wikidataHealthQuery)
+    st.session_state.df_res_wikidatahealthqry = results
+    st.session_state.is_exec_wikidatahealthqry = not st.session_state.is_exec_wikidatahealthqry
+
+
 #### Load Graph ########################################################################################################
 
 
@@ -180,8 +203,21 @@ def load_graph():
     print(f"loaded {len(graph)} triples")
     return graph
 
-
 graph = load_graph()
+
+
+#### Remote Endpoint Status ############################################################################################
+
+exec_wikidatahealthqry()
+
+
+#### Sidebar ###########################################################################################################
+with st.sidebar:
+    st.title("Status of the remote SPARQL endpoint")
+    with st.spinner("Wait for it..."):
+        time.sleep(2)
+    st.success("Query performed correctly !")
+    print(st.session_state.df_res_wikidatahealthqry) ## do not give the expected result
 
 
 #### Rendered Content ##################################################################################################
@@ -347,13 +383,12 @@ with qryTab2:
     else:
         st.markdown("Execute the request to see the results !")
 
-
 st.header("3. Perform custom queries")
 
 qryTab1, qryTab2 = st.tabs(["Custom SPARQL query", "Query preview"])
 
 with qryTab1:
-    customquery = st.text_area("Edit you SPARQL query", value="", height=400)
+    customquery = st.text_area("Edit you SPARQL query", value=countquery, height=400)
 
 with qryTab2:
     st.markdown("Preview of your custom SPARQL query")
