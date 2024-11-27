@@ -208,7 +208,7 @@ graph = load_graph()
 
 #### Remote Endpoint Status ############################################################################################
 
-exec_wikidatahealthqry()
+## exec_wikidatahealthqry() ## RDFlib doesn't support federated queries
 
 
 #### Sidebar ###########################################################################################################
