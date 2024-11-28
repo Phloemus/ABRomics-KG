@@ -1,0 +1,20 @@
+version: "3"
+services:
+
+  ## Fuseki server
+  fuseki:
+    container_name: abromics-fuseki-server
+    build: ./fuseki
+    volumes:
+      - ./rdf:/rdf
+    ports:
+      - 8030:3030
+
+  ## Streamlit app
+  streamlit:
+    container_name: abromics-streamlit-demo
+    build: ./src
+    volumes:
+      - ./queries:/queries
+    ports:
+      - 8501:8501
