@@ -4,6 +4,9 @@ import json
 import os
 import datetime
 import time
+import pandas as pd
+from pandas import json_normalize
+from SPARQLWrapper import SPARQLWrapper, JSON, POST
 
 
 #### Page configuration
@@ -11,15 +14,16 @@ st.set_page_config(
     page_title="ABRomics-KG", layout="centered", initial_sidebar_state="collapsed"
 )
 
-
-#### Methods
+#### Utils
 def readJsonFromFile(path):
     with open(path) as f:
         d = json.load(f)
         return d
 
-
 #### Constants #########################################################################################################
+sparql = SPARQLWrapper("http://sosagraph-fuseki:8030/abromics-kg")
+sparql.setReturnFormat(JSON)
+
 countries = readJsonFromFile("data/countries.json")
 
 
@@ -161,54 +165,55 @@ query2 = f"""
 
 #### States modifier function ##########################################################################################
 def exec_count_qry():
-    results = graph.query(countquery)
-    st.session_state.df_res_countqry = results
+    sparql.setQuery(countquery)
+    try:
+        res = sparql.query().convert()
+        recs = res["results"]["bindings"]
+        st.session_state.df_res_countqry = json_normalize(recs)
+    except Exception as e:
+        print(e)
     st.session_state.is_exec_countqry = not st.session_state.is_exec_countqry
 
-
 def exec_qry1():
-    results = graph.query(query1)
-    st.session_state.df_res_qry1 = results
-    st.session_state.is_exec_qry1 = not st.session_state.is_exec_qry1
-
+    sparql.setQuery(query1)
+    try:
+        res = sparql.query().convert()
+        recs = res["results"]["bindings"]
+        st.session_state.df_res_qry1 = json_normalize(recs)
+    except Exception as e:
+        print(e)
+    st.session_state.is_exec_qry1 = not st.session_state.is_exec_query1
 
 def exec_qry2():
-    results = graph.query(query2)
-    st.session_state.df_res_qry2 = results
+    sparql.setQuery(query1)
+    try:
+        res = sparql.query().convert()
+        recs = res["results"]["bindings"]
+        st.session_state.df_res_qry2 = json_normalize(recs)
+    except Exception as e:
+        print(e)
     st.session_state.is_exec_qry2 = not st.session_state.is_exec_qry2
 
-
 def exec_customqry():
-    results = graph.query(customquery)
-    st.session_state.df_res_customqry = results
+    sparql.setQuery(query1)
+    try:
+        res = sparql.query().convert()
+        recs = res["results"]["bindings"]
+        st.session_state.df_res_customqry = json_normalize(recs)
+    except Exception as e:
+        print(e)
     st.session_state.is_exec_customqry = not st.session_state.is_exec_customqry
-
 
 ## impossible to perform a federeated query with rdflib
 def exec_wikidatahealthqry():
-    results = graph.query(wikidataHealthQuery)
-    st.session_state.df_res_wikidatahealthqry = results
+    sparql.setQuery(query1)
+    try:
+        res = sparql.query().convert()
+        recs = res["results"]["bindings"]
+        st.session_state.df_res_wikidatahealthqry = json_normalize(recs)
+    except Exception as e:
+        print(e)
     st.session_state.is_exec_wikidatahealthqry = not st.session_state.is_exec_wikidatahealthqry
-
-
-#### Load Graph ########################################################################################################
-
-
-@st.cache_data(persist="disk")
-def load_graph():
-    graph = rdflib.Graph()
-    rdfDir = "../rdf"
-    for fileName in os.listdir(rdfDir):
-        graph.parse(f"{rdfDir}/{fileName}", format="ttl")
-    print(f"loaded {len(graph)} triples")
-    return graph
-
-graph = load_graph()
-
-
-#### Remote Endpoint Status ############################################################################################
-
-## exec_wikidatahealthqry() ## RDFlib doesn't support federated queries
 
 
 #### Sidebar ###########################################################################################################

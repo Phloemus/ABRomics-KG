@@ -13,6 +13,7 @@ RUN . .venv/bin/activate # . is the same as source
 RUN pip install pyarrow
 RUN pip install streamlit
 RUN pip install rdflib
+RUN pip install SPARQLWrapper
 
 CMD ["streamlit", "run", "app.py"]
 
