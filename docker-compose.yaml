@@ -9,6 +9,8 @@ services:
       - ./rdf:/rdf
     ports:
       - 8030:3030
+    networks:
+      - demo
 
   ## Streamlit app
   streamlit:
@@ -18,3 +20,9 @@ services:
       - ./queries:/queries
     ports:
       - 8501:8501
+    networks:
+      - demo
+
+networks:
+  demo:
+    name: abromics-kg-network

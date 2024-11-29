@@ -21,7 +21,7 @@ def readJsonFromFile(path):
         return d
 
 #### Constants #########################################################################################################
-sparql = SPARQLWrapper("http://sosagraph-fuseki:8030/abromics-kg")
+sparql = SPARQLWrapper("http://fuseki:3030/abromics-kg") 
 sparql.setReturnFormat(JSON)
 
 countries = readJsonFromFile("data/countries.json")
@@ -136,12 +136,12 @@ query2 = f"""
     PREFIX schema: <https://schema.org/>
     PREFIX abromics: <https://abromics.fr/>
     PREFIX prov: <http://www.w3.org/ns/prov#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     
-    # What are actively circulating ABR genes, given a specific time-frame and at least two different sample types
+    # What are actively circulating ABR genes, given a specific time-frame
     
-    SELECT ?gene_name (COUNT(DISTINCT ?sampleType) as ?nb_sample_types) (GROUP_CONCAT(DISTINCT ?sampleType; separator=", ") AS ?sampleTypes) (COUNT(DISTINCT ?res) as ?total_nb_occurences) WHERE {{
+    SELECT ?gene_name (COUNT(DISTINCT ?res) as ?total_nb_occurences) WHERE {{
         ?sample rdf:type sio:001050 ;
-             abromics:sampleType ?sampleType ; # rework this
              prov:generatedAtTime ?collectedDate .
         FILTER (?collectedDate > "{st.session_state.startTime}T00:00:00Z"^^xsd:dateTime && 
            ?collectedDate < "{st.session_state.endTime}T00:00:00Z"^^xsd:dateTime)
@@ -150,15 +150,14 @@ query2 = f"""
              sosa:hasFeatureOfInterest ?gene ;
              sosa:hasFeatureOfInterest ?sample ;
              sosa:hasSimpleResult ?res .
-           
+    
        ?obs_prop rdf:type sosa:ObservableProperty ;
              rdfs:label "Resistance gene" .
     
        ?gene rdf:type go:Gene ;
              rdfs:label ?gene_name .
     }} 
-    GROUP BY ?gene_name ?resValue
-    HAVING (COUNT(DISTINCT ?sampleType) > 1)
+    GROUP BY ?gene_name ?res
     ORDER BY DESC(?total_nb_occurences)
 """
 
@@ -182,10 +181,10 @@ def exec_qry1():
         st.session_state.df_res_qry1 = json_normalize(recs)
     except Exception as e:
         print(e)
-    st.session_state.is_exec_qry1 = not st.session_state.is_exec_query1
+    st.session_state.is_exec_qry1 = not st.session_state.is_exec_qry1
 
 def exec_qry2():
-    sparql.setQuery(query1)
+    sparql.setQuery(query2)
     try:
         res = sparql.query().convert()
         recs = res["results"]["bindings"]
@@ -195,7 +194,7 @@ def exec_qry2():
     st.session_state.is_exec_qry2 = not st.session_state.is_exec_qry2
 
 def exec_customqry():
-    sparql.setQuery(query1)
+    sparql.setQuery(customquery)
     try:
         res = sparql.query().convert()
         recs = res["results"]["bindings"]
@@ -206,7 +205,7 @@ def exec_customqry():
 
 ## impossible to perform a federeated query with rdflib
 def exec_wikidatahealthqry():
-    sparql.setQuery(query1)
+    sparql.setQuery(wikidataHealthQuery)
     try:
         res = sparql.query().convert()
         recs = res["results"]["bindings"]
