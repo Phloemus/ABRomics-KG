@@ -21,7 +21,8 @@ def readJsonFromFile(path):
         return d
 
 #### Constants #########################################################################################################
-sparql = SPARQLWrapper("http://fuseki:3030/abromics-kg") 
+# sparql = SPARQLWrapper("http://fuseki:3030/abromics-kg") 
+sparql = SPARQLWrapper("http://localhost:8030/abromics-kg") 
 sparql.setReturnFormat(JSON)
 
 countries = readJsonFromFile("data/countries.json")
@@ -87,8 +88,7 @@ wikidataHealthQuery = f"""
     }} 
 """
 
-query1 = (
-    f"""
+query1 = f"""
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -97,6 +97,8 @@ query1 = (
     PREFIX schema: <https://schema.org/>
     PREFIX abromics: <https://abromics.fr/>
     PREFIX prov: <http://www.w3.org/ns/prov#>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX wd: <http://www.wikidata.org/entity/>
     
     # CQ1: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?
     
@@ -117,15 +119,14 @@ query1 = (
     
         # fetch the id corresponding to the targeted location
         SERVICE <https://query.wikidata.org/sparql> {{
+            ?location wdt:P31 wd:Q6256 .
             ?location rdfs:label ?location_name .
-            FILTER(?location_name = "%s" && LANG(?location_name) = "en")
+            FILTER(?location_name = "{st.session_state.country}"@en)
        }}
     }}
     GROUP BY ?sample_id ?gene_name ?location_name
     ORDER BY DESC(?count)
 """
-    % st.session_state.country
-)
 
 query2 = f"""
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
