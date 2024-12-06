@@ -1,10 +1,6 @@
 FROM python:3.12-slim
 
 # RUN apk add --no-cache python3 py3-pip py3-virtualenv
-RUN mkdir src
-
-COPY app.py src
-COPY data src/data
 
 WORKDIR /src
 

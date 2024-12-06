@@ -255,7 +255,7 @@ st.markdown(
 
 st.markdown("")
 
-st.header("1. Knowedge graph structure")
+st.header("1. Knowledge graph structure")
 
 
 st.header("2. Execute demo queries")
@@ -414,3 +414,7 @@ if st.session_state.is_exec_customqry:
     st.success("Query performed correctly !")
     print(st.session_state.df_res_customqry)
     st.table(st.session_state.df_res_customqry)
+
+
+######## Hello !!
+

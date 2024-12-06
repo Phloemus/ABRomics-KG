@@ -17,6 +17,8 @@ services:
     container_name: abromics-streamlit-demo
     build: ./src
     volumes:
+      - ./src/app.py:/src/app.py
+      - ./src/data:/src/data
       - ./queries:/queries
     ports:
       - 8501:8501
