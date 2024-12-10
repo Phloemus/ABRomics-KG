@@ -11,7 +11,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON, POST
 
 #### Page configuration
 st.set_page_config(
-    page_title="ABRomics-KG", layout="centered", initial_sidebar_state="collapsed"
+    page_title="ABRomics-KG", layout="centered", initial_sidebar_state="expanded"
 )
 
 #### Utils
@@ -221,8 +221,18 @@ with st.sidebar:
     st.title("Status of the remote SPARQL endpoint")
     with st.spinner("Wait for it..."):
         time.sleep(2)
-    st.success("Query performed correctly !")
-    print(st.session_state.df_res_wikidatahealthqry) ## do not give the expected result
+    st.success("Wikidata SPARQL endpoint available")
+    st.subheader("Summary")
+    st.markdown(
+    """
+        1. [Dataset](#dataset)
+        2. [Knowledge graph structure](#kg-structure)
+        3. [Execute demo queries](#demo-queries)
+            1. [Count query](#count-query)
+            2. [Antibiotic resistances by country](#abr-country-query)
+            3. [Antibiotic resistances in different timeframes](#abr-time-query)
+    """
+    )
 
 
 #### Rendered Content ##################################################################################################
@@ -246,19 +256,45 @@ of antibiotic resistance data."""
 
 st.subheader("Summary")
 st.markdown(
-    """
-    1. Knowledge graph structure
-    2. Execute demo queries
-    3. Perform custom queries
+"""
+    1. [Dataset](#dataset)
+    2. [Knowledge graph structure](#kg-structure)
+    3. [Execute demo queries](#demo-queries)
+        1. [Count query](#count-query)
+        2. [Antibiotic resistances by country](#abr-country-query)
+        3. [Antibiotic resistances in different timeframes](#abr-time-query)
 """
 )
 
 st.markdown("")
 
-st.header("1. Knowledge graph structure")
+st.markdown('<a id="dataset"></a>', unsafe_allow_html=True)
+st.header("1. Dataset")
+
+st.markdown(
+        """
+        The knowledge graph has been created using public Acinetobacter baumanii metadata and antibiotic resistance
+        analysis data from the [ABRomics](https://www.abromics.fr) plateform.
+
+        In total, The genomic sequences and metadata 
+        of 40 A. baumannii strains found in human, animal and environmental origins have been integrated and 
+        processed into the [ABRomics](https://www.abromics.fr) platform. The resulting 120 analysis reports 
+        gather sample metadata as well as antibiotic resistance genes detected with the 
+        [ABRomics](https://www.abromics.fr) bioinformatics workflows were then extracted and formated using 
+        the graph structure described below.
+        """
+)
+
+st.markdown('<a id="kg-structure"></a>', unsafe_allow_html=True)
+st.header("2. Knowledge graph structure")
+
+st.image("assets/figure-1.png", caption="RDF instances for the sample metadata")
+
+st.image("assets/figure-2.png", caption="RDF instances for the data analysis results")
 
 
-st.header("2. Execute demo queries")
+st.markdown('<a id="demo-queries"></a>', unsafe_allow_html=True)
+st.header("3. Execute demo queries")
 
 st.markdown(
     f"""The SPARQL request corresponding to the competency question of the reference paper can be executed
@@ -270,6 +306,7 @@ st.markdown(
 
 st.subheader("Exploration request")
 
+st.markdown('<a id="count-query"></a>', unsafe_allow_html=True)
 st.markdown(f"Count the number of nodes in the local knowledge graph")
 
 st.button(
@@ -302,6 +339,8 @@ with qryTab2:
 
 ### Query 1 ############################################################################################################
 
+
+st.markdown('<a id="abr-country-query"></a>', unsafe_allow_html=True)
 st.subheader(
     "CQ1: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?"
 )
@@ -342,6 +381,8 @@ with qryTab2:
 
 ### Query 2 ############################################################################################################
 
+
+st.markdown('<a id="abr-time-query"></a>', unsafe_allow_html=True)
 st.subheader(
     "CQ2: What are actively circulating ABR genes, given a specific time-frame and at least two different sample types"
 )
@@ -387,34 +428,4 @@ with qryTab2:
         st.table(st.session_state.df_res_qry2)
     else:
         st.markdown("Execute the request to see the results !")
-
-st.header("3. Perform custom queries")
-
-qryTab1, qryTab2 = st.tabs(["Custom SPARQL query", "Query preview"])
-
-with qryTab1:
-    customquery = st.text_area("Edit you SPARQL query", value=countquery, height=400)
-
-with qryTab2:
-    st.markdown("Preview of your custom SPARQL query")
-    st.code(customquery, language="sparql", line_numbers=False)
-
-st.button(
-    "Execute query",
-    on_click=exec_customqry,
-    key=3,
-    type="primary",
-    disabled=False,
-    use_container_width=False,
-)
-
-if st.session_state.is_exec_customqry:
-    with st.spinner("Wait for it..."):
-        time.sleep(2)
-    st.success("Query performed correctly !")
-    print(st.session_state.df_res_customqry)
-    st.table(st.session_state.df_res_customqry)
-
-
-######## Hello !!
 

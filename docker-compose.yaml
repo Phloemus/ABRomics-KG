@@ -19,6 +19,7 @@ services:
     volumes:
       - ./src/app.py:/src/app.py
       - ./src/data:/src/data
+      - ./src/assets:/src/assets
       - ./queries:/queries
     ports:
       - 8501:8501
