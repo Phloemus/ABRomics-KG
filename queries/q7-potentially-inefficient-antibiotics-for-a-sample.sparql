@@ -1,0 +1,45 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX go: <http://purl.org/obo/owl/GO#>
+PREFIX aro: <http://purl.obolibrary.org/obo/aro.owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX schema: <https://schema.org/>
+PREFIX abromics: <https://abromics.fr/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# Q7: What are all the potentially inefficient antibiotic drugs given a specific sample
+# 
+# Issue: we retrive data from the observation results but sometimes a resistance gene gives a resistance to multiple antibiotics
+#        so it has been represented as "antibiotic1+antibiotic2" which is not clean. Handle this in the script that parses the 
+#        ABRomics data to the knowledge graph
+# 
+# Going further: resonate on chebi or a drug database to give all the drugs may be inefficient instead of the inefficient antibiotics
+#                get all the drugs that contains the inefficient antibiotics
+#
+SELECT DISTINCT ?sample (GROUP_CONCAT(DISTINCT ?gene_name; separator=", ") as ?res_gene_names) ?sampleType 
+                ?microorganism (GROUP_CONCAT(DISTINCT ?resValue; separator=", ") AS ?targetAntibiotic) 
+WHERE {
+
+   ?sample rdf:type sio:001050 ;
+        schema:identifier "ARDIG32" ;
+        abromics:sampleType ?sampleType ;
+        abromics:microorganism ?microorganism .
+
+   ?obs_prop rdf:type sosa:ObservableProperty ;
+        rdfs:label "Target antibiotic" .
+
+   ?gene rdf:type go:Gene ;
+        rdfs:label ?gene_name .
+
+   ?res rdf:type sosa:Result ;
+        sosa:hasSimpleResult ?resValue .
+
+   ?observations sosa:hasObservableProperty ?obs_prop ;
+        sosa:hasFeatureOfInterest ?gene ;
+        sosa:hasFeatureOfInterest ?sample ;
+        sosa:hasFeatureOfInterest ?strain ;
+        sosa:hasResult ?res .
+
+}

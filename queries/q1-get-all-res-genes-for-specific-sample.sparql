@@ -1,0 +1,28 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX go: <http://purl.org/obo/owl/GO#>
+PREFIX schema: <https://schema.org/>
+
+## Q1: Get the resistances genes for a specific sample (sample ARDIG32)
+## 
+SELECT ?sample_id (?gene_name as ?resistance_gene_name) WHERE {
+
+   ?obs_prop rdf:type sosa:ObservableProperty ;
+        rdfs:label "Resistance gene" .
+                
+   ?sample rdf:type sio:001050 ;
+       schema:identifier ?sample_id .
+
+   FILTER(?sample_id = "ARDIG32")
+
+   ?gene rdf:type go:Gene ;
+       rdfs:label ?gene_name .
+                
+   ?observations sosa:hasObservableProperty ?obs_prop ;
+       sosa:hasFeatureOfInterest ?gene ;
+       sosa:hasFeatureOfInterest ?sample ;
+       sosa:hasSimpleResult ?gene_name .
+
+}

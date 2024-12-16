@@ -1,0 +1,33 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX go: <http://purl.org/obo/owl/GO#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX schema: <https://schema.org/>
+PREFIX abromics: <https://abromics.fr/>
+
+
+## Q3: For human-only samples, what are the most shared resistance genes ? 
+## The idea is to filter sample based on their biological sources such as soil, 
+## water, air, plants, animals, anatomical structures (blood, gut, etc.)
+## 
+SELECT DISTINCT ?gene_name (COUNT(?res) as ?nb_occurences) WHERE {
+
+   ?sample rdf:type sio:001050 ;
+        abromics:sampleType "human" .
+
+   ?obs_prop rdf:type sosa:ObservableProperty ;
+        rdfs:label "Resistance gene" .
+
+   ?gene rdf:type go:Gene ;
+        rdfs:label ?gene_name .
+
+   ?observations sosa:hasObservableProperty ?obs_prop ;
+        sosa:hasFeatureOfInterest ?gene ;
+        sosa:hasFeatureOfInterest ?sample ;
+        sosa:hasResult/sosa:hasSimpleResult ?res .
+
+} 
+GROUP BY ?gene_name ?res
+ORDER BY DESC(?nb_occurences)

@@ -36,6 +36,13 @@ if "is_exec_countqry" not in st.session_state:
 if "df_res_countqry" not in st.session_state:
     st.session_state.df_res_countqry = ""
 
+if "is_exec_metricsqry" not in st.session_state:
+    st.session_state.is_exec_metricsqry = False
+
+if "df_res_metricsqry" not in st.session_state:
+    st.session_state.df_res_metricsqry = ""
+
+
 if "is_exec_qry1" not in st.session_state:
     st.session_state.is_exec_qry1 = False
 
@@ -57,12 +64,14 @@ if "endTime" not in st.session_state:
 if "df_res_qry2" not in st.session_state:
     st.session_state.df_res_qry2 = ""
 
+if "selectedMetric" not in st.session_state:
+    st.session_state.selectedMetric = "Gene length"
+
 if "is_exec_customqry" not in st.session_state:
     st.session_state.is_exec_customqry = False
 
 if "df_res_customqry" not in st.session_state:
     st.session_state.df_res_customqry = ""
-
 
 if "is_exec_wikidatahealthqry" not in st.session_state:
     st.session_state.is_exec_wikidatahealthqry = False
@@ -162,8 +171,54 @@ query2 = f"""
     ORDER BY DESC(?total_nb_occurences)
 """
 
+query3 = f"""
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX sio: <http://semanticscience.org/resource/>
+    PREFIX go: <http://purl.org/obo/owl/GO#>
+    PREFIX aro: <http://purl.obolibrary.org/obo/aro.owl#>
+    PREFIX obo: <http://purl.obolibrary.org/obo/>
+    PREFIX schema: <https://schema.org/>
+    
+    ## Q2: Get the best antibiotic resistance genes for a given metric for all the samples
+    ## 
+    SELECT DISTINCT ?sample_id ?gene_name (?res as ?gene_length) WHERE {{
+        
+        ?obs_prop rdf:type sosa:ObservableProperty ;
+            rdfs:label "{st.session_state.selectedMetric}" .
+                    
+        ?sample rdf:type sio:001050 ;
+            schema:identifier ?sample_id .
+    
+        ?gene rdf:type go:Gene ;
+            rdfs:label ?gene_name .
+                    
+        ?observations sosa:hasObservableProperty ?obs_prop ;
+            sosa:hasFeatureOfInterest ?gene ;
+            sosa:hasFeatureOfInterest ?sample ;
+            sosa:hasResult/sosa:hasSimpleResult ?res .
+      
+    }}
+    ORDER BY DESC(?res)
+"""
+
+queryMetrics = f"""
+    PREFIX go: <http://purl.org/obo/owl/GO#>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    
+    SELECT ?observableMetricLabels
+    WHERE {{
+      ?observableProperty rdf:type sosa:ObservableProperty ;
+      		rdfs:label ?observableMetricLabels
+      FILTER NOT EXISTS {{ ?observableProperty rdf:type go:Gene . }}
+    }}
+"""
 
 #### States modifier function ##########################################################################################
+
 def exec_count_qry():
     sparql.setQuery(countquery)
     try:
@@ -173,6 +228,16 @@ def exec_count_qry():
     except Exception as e:
         print(e)
     st.session_state.is_exec_countqry = not st.session_state.is_exec_countqry
+
+def exec_metrics_qry():
+    sparql.setQuery(queryMetrics)
+    try:
+        res = sparql.query().convert()
+        recs = res["results"]["bindings"]
+        st.session_state.df_res_metricsqry = json_normalize(recs)
+    except Exception as e:
+        print(e)
+    st.session_state.is_exec_metricsqry = not st.session_state.is_exec_metricsqry
 
 def exec_qry1():
     sparql.setQuery(query1)
@@ -337,6 +402,46 @@ with qryTab2:
         st.markdown("Execute the request to see the results !")
 
 
+
+### Query Metrics #####################################################################################################
+
+
+st.markdown('<a id="abr-metrics-query"></a>', unsafe_allow_html=True)
+st.subheader(
+    "Loads the observation property metrics"
+)
+
+st.markdown(f"Allows to get the observable property metrics that can be selected in other queries")
+
+st.button(
+    "Execute query",
+    on_click=exec_metrics_qry,
+    key=1,
+    type="primary",
+    disabled=False,
+    use_container_width=False,
+)
+
+qryTab1, qryTab2 = st.tabs(["Sparql query", "Result table"])
+
+with qryTab1:
+    st.markdown(
+        f"This SPARQL query allows to get the property metrics"
+    )
+    st.code(queryMetrics, language="sparql", line_numbers=False)
+
+with qryTab2:
+    if st.session_state.is_exec_qry1:
+        with st.spinner("Wait for it..."):
+            time.sleep(2)
+        st.success("Query performed correctly !")
+        print(st.session_state.df_res_qry1)
+        st.table(st.session_state.df_res_qry1)
+    else:
+        st.markdown("Execute the request to see the results !")
+
+
+
 ### Query 1 ############################################################################################################
 
 
@@ -355,7 +460,7 @@ st.selectbox(
 st.button(
     "Execute query",
     on_click=exec_qry1,
-    key=1,
+    key=2,
     type="primary",
     disabled=False,
     use_container_width=False,
@@ -402,7 +507,7 @@ st.write("Samples from ", start, " to ", end)
 st.button(
     "Execute query",
     on_click=exec_qry2,
-    key=2,
+    key=3,
     type="primary",
     disabled=False,
     use_container_width=False,
