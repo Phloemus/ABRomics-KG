@@ -16,6 +16,8 @@ services:
   streamlit:
     container_name: abromics-streamlit-demo
     build: ./src
+    environment:
+      - GRAPH_URL=${GRAPH_URL}
     volumes:
       - ./src/app.py:/src/app.py
       - ./src/data:/src/data

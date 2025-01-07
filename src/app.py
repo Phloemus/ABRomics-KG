@@ -21,8 +21,13 @@ def readJsonFromFile(path):
         return d
 
 #### Constants #########################################################################################################
-# sparql = SPARQLWrapper("http://fuseki:3030/abromics-kg") 
-sparql = SPARQLWrapper("http://localhost:8030/abromics-kg") 
+
+## Check if the script has been launched in a docker container or if it was launch manually (set up sparqlWrapper accordingly)
+if 'GRAPH_URL' in os.environ:
+    sparql = SPARQLWrapper(os.environ['GRAPH_URL'])
+else:
+    sparql = SPARQLWrapper("http://localhost:8030/abromics-kg") 
+
 sparql.setReturnFormat(JSON)
 
 countries = readJsonFromFile("data/countries.json")
@@ -224,6 +229,7 @@ def exec_count_qry():
     try:
         res = sparql.query().convert()
         recs = res["results"]["bindings"]
+        print(recs)
         st.session_state.df_res_countqry = json_normalize(recs)
     except Exception as e:
         print(e)
@@ -284,7 +290,7 @@ def exec_wikidatahealthqry():
 #### Sidebar ###########################################################################################################
 with st.sidebar:
     st.title("Status of the remote SPARQL endpoint")
-    with st.spinner("Wait for it..."):
+    with st.spinner("Wait for it..."): ## Just wait instead of indicate the server status
         time.sleep(2)
     st.success("Wikidata SPARQL endpoint available")
     st.subheader("Summary")
@@ -396,7 +402,6 @@ with qryTab2:
         with st.spinner("Wait for it..."):
             time.sleep(2)
         st.success("Query performed correctly !")
-        print(st.session_state.df_res_countqry)
         st.table(st.session_state.df_res_countqry)
     else:
         st.markdown("Execute the request to see the results !")
@@ -431,12 +436,11 @@ with qryTab1:
     st.code(queryMetrics, language="sparql", line_numbers=False)
 
 with qryTab2:
-    if st.session_state.is_exec_qry1:
+    if st.session_state.is_exec_metricsqry:
         with st.spinner("Wait for it..."):
             time.sleep(2)
         st.success("Query performed correctly !")
-        print(st.session_state.df_res_qry1)
-        st.table(st.session_state.df_res_qry1)
+        st.table(st.session_state.df_res_metricsqry)
     else:
         st.markdown("Execute the request to see the results !")
 
