@@ -545,5 +545,11 @@ st.divider()
 st.markdown("")
 st.subheader("Aknowledgments")
 
-st.markdown("This demo is part of the [ABRomics](https://abromics.fr) project")
+st.markdown("""This work is financially supported by the French Priority Research Programme on Antimicrobial
+Resistance (PPR antibioresistance), coordinated by Inserm and funded by the Secretaire General
+Pour L’investissement (SGPI) and by the French government grant by the Agence Nationale
+de la Recherche under France 2030 for structuring research facilities / EQUIPEX+, reference
+ANR-21-ESRE-0048. Part of this work was carried out within the IBD-NExT cluster and benefited
+from the “France 2030” plan and financial support from the Pays de la Loire Region and Nantes
+Métropole.""")
 st.image("assets/logo-abromics.png")
