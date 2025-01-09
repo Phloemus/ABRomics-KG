@@ -1,7 +1,9 @@
 # ABRomics-KG
 
 **ABRomics-KG** is a knowledge graph that allows to store antibiotic resistance data by using the sosa ontology 
-and other domain specific ontologies such as **ARO** (Antibiotic Resistance Ontology).
+and other domain specific ontologies such as **ARO** (Antibiotic Resistance Ontology). 
+
+Over the long run, we plan to integrate this knowledge graph to the [ABRomics](https://abromics.fr) plateform.
 
 ## Content
 
