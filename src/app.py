@@ -538,3 +538,12 @@ with qryTab2:
     else:
         st.markdown("Execute the request to see the results !")
 
+st.divider()
+
+## Footer 
+
+st.markdown("")
+st.subheader("Aknowledgments")
+
+st.markdown("This demo is part of the [ABRomics](https://abromics.fr) project")
+st.image("assets/logo-abromics.png")

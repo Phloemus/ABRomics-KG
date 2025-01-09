@@ -7,6 +7,10 @@ and other domain specific ontologies such as **ARO** (Antibiotic Resistance Onto
 
 In this repo, you will find [rdf data](https://github.com/Phloemus/ABRomics-KG/tree/main/rdf) and [queries](https://github.com/Phloemus/ABRomics-KG/tree/main/queries) used for the article named *"A multi-modal and temporal antibiotic resistance knowledge graph"* submitted to the **SWAT4HCLS** conference (2025 edition).
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Phloemus/ABRomics-KG/main/assets/cq2.png" alt="Streamlit - Créer des dashboards web en python" />
+</p>
+
 ## Launch the demo locally
 
 Along side the rdf graph and queries, you can also explore this graph locally all by yourself !
