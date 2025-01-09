@@ -55,9 +55,11 @@ mv apache-jena-fuseki-5.2.0 fuseki
 ./fuseki/fuseki-server --file=rdf/samples.ttl --file=rdf/genes.ttl --file=rdf/observations.ttl --file=rdf/platforms.ttl --file=rdf/strains.ttl --file=rdf/observableProperties.ttl --file=rdf/people.ttl --file=rdf/procedures.ttl --file=rdf/sensors.ttl /abromics-kg
 ```
 
-#### Installing the conda enviornment
+#### Installing the python virtual enviornment
 
-Open a new shell and install the conda environment necessary to launch the web demo
+Open a new shell and install the virtual environment necessary to launch the web demo (virtual env or conda)
+
+##### With virtual env
 
 ```
 bash
@@ -66,6 +68,8 @@ cd src
 python -m venv ./venv
 source venv/bin/activate
 ```
+
+##### With conda
 
 ```
 bash
