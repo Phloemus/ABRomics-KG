@@ -4,7 +4,7 @@ RUN apk update && \
     apk add tar curl
 
 # Get the fuseki tools
-RUN wget -o apache-jena-fuseki-5.2.0.tar.gz https://dlcdn.apache.org/jena/binaries/apache-jena-fuseki-5.2.0.tar.gz
+RUN curl -o apache-jena-fuseki-5.2.0.tar.gz https://dlcdn.apache.org/jena/binaries/apache-jena-fuseki-5.2.0.tar.gz
 RUN tar -xf apache-jena-fuseki-5.2.0.tar.gz
 RUN mv apache-jena-fuseki-5.2.0 fuseki
 
