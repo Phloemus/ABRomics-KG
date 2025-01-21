@@ -543,7 +543,7 @@ st.divider()
 ## Footer 
 
 st.markdown("")
-st.subheader("Aknowledgments")
+st.subheader("Acknowledgments")
 
 st.markdown("""This work is financially supported by the French Priority Research Programme on Antimicrobial
 Resistance (PPR antibioresistance), coordinated by Inserm and funded by the Secretaire General

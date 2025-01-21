@@ -24,7 +24,7 @@ services:
       - ./src/assets:/src/assets
       - ./queries:/queries
     ports:
-      - 8501:8501
+      - ${STREAMLIT_PORT}:8501
     networks:
       - demo
 
