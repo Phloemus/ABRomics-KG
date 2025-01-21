@@ -4,9 +4,9 @@ RUN apk update && \
     apk add tar curl
 
 # Get the fuseki tools
-RUN curl -o apache-jena-fuseki-5.2.0.tar.gz https://dlcdn.apache.org/jena/binaries/apache-jena-fuseki-5.2.0.tar.gz
-RUN tar -xf apache-jena-fuseki-5.2.0.tar.gz
-RUN mv apache-jena-fuseki-5.2.0 fuseki
+RUN curl -o apache-jena-fuseki-5.3.0.tar.gz https://dlcdn.apache.org/jena/binaries/apache-jena-fuseki-5.3.0.tar.gz
+RUN tar -xf apache-jena-fuseki-5.3.0.tar.gz
+RUN mv apache-jena-fuseki-5.3.0 fuseki
 
 ## Trying to use geosparql with fuseki
 # RUN wget https://repo1.maven.org/maven2/org/apache/jena/jena-fuseki-geosparql/5.2.0/jena-fuseki-geosparql-5.2.0.jar
