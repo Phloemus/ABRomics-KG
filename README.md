@@ -5,6 +5,11 @@ and other domain specific ontologies such as **ARO** (Antibiotic Resistance Onto
 
 Over the long run, we plan to integrate this knowledge graph to the [ABRomics](https://abromics.fr) plateform.
 
+## Online demo
+
+Find the online demo of the ABRomics-kg and experiment the request detailed in the paper directly : [https://10-54-1-56.gcp.glicid.fr/](https://10-54-1-56.gcp.glicid.fr/)
+Other queries may be added in this demo to illustrate the use of the knowledge graph for different usecases.
+
 ## Content
 
 In this repo, you will find [rdf data](https://github.com/Phloemus/ABRomics-KG/tree/main/rdf) and [queries](https://github.com/Phloemus/ABRomics-KG/tree/main/queries) used for the article named *"A multi-modal and temporal antibiotic resistance knowledge graph"* submitted to the **SWAT4HCLS** conference (2025 edition).
@@ -13,11 +18,6 @@ In this repo, you will find [rdf data](https://github.com/Phloemus/ABRomics-KG/t
     <img src="https://raw.githubusercontent.com/Phloemus/ABRomics-KG/main/assets/cq1.png" alt="cq1" width="49%" align="top" />
     <img src="https://raw.githubusercontent.com/Phloemus/ABRomics-KG/main/assets/cq2.png" alt="cq2" width="49%" align="top"/>
 </p>
-
-## Online demo
-
-Find the online demo of the ABRomics-kg and experiment the request detailed in the paper directly : [https://10-54-1-56.gcp.glicid.fr/](https://10-54-1-56.gcp.glicid.fr/)
-Other queries may be added in this demo to illustrate the use of the knowledge graph for different usecases.
 
 ## Launch the demo locally
 
