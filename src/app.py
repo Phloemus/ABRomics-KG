@@ -26,7 +26,7 @@ def readJsonFromFile(path):
 if 'GRAPH_URL' in os.environ:
     sparql = SPARQLWrapper(os.environ['GRAPH_URL'])
 else:
-    sparql = SPARQLWrapper("http://localhost:8030/abromics-kg") 
+    sparql = SPARQLWrapper("http://localhost:3030/abromics-kg") 
 
 sparql.setReturnFormat(JSON)
 
