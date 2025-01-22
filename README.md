@@ -14,6 +14,11 @@ In this repo, you will find [rdf data](https://github.com/Phloemus/ABRomics-KG/t
     <img src="https://raw.githubusercontent.com/Phloemus/ABRomics-KG/main/assets/cq2.png" alt="cq2" width="49%" align="top"/>
 </p>
 
+## Online demo
+
+Find the online demo of the ABRomics-kg and experiment the request detailed in the paper directly : [https://10-54-1-56.gcp.glicid.fr/](https://10-54-1-56.gcp.glicid.fr/)
+Other queries may be added in this demo to illustrate the use of the knowledge graph for different usecases.
+
 ## Launch the demo locally
 
 Along side the rdf graph and queries, you can also explore this graph locally all by yourself !
