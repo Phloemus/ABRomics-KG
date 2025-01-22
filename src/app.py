@@ -33,6 +33,17 @@ sparql.setReturnFormat(JSON)
 countries = readJsonFromFile("data/countries.json")
 
 
+#### Analytics #########################################################################################################
+
+if 'IS_PROD' in os.environ and os.environ['IS_PROD'] == "true":
+    st.markdown(
+        """
+            <script defer data-domain="10-54-1-56.gcp.glicid.fr" src="https://analytics.gingembre.org/js/script.js"></script>
+        """,
+        unsafe_allow_html=True
+    )
+
+
 #### States ############################################################################################################
 
 if "is_exec_countqry" not in st.session_state:

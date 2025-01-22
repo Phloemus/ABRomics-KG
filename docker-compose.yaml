@@ -32,6 +32,7 @@ services:
     build: ./src
     environment:
       - GRAPH_URL=${GRAPH_URL}
+      - IS_PROD=${IS_PROD}
     volumes:
       - ./src/app.py:/src/app.py
       - ./src/.streamlit:/src/.streamlit
