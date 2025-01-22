@@ -34,6 +34,7 @@ services:
       - GRAPH_URL=${GRAPH_URL}
     volumes:
       - ./src/app.py:/src/app.py
+      - ./src/.streamlit:/src/.streamlit
       - ./src/data:/src/data
       - ./src/assets:/src/assets
       - ./queries:/queries
