@@ -1,4 +1,5 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix schema: <https://schema.org/> .
 @prefix abromics: <https://abromics.fr/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -15,11 +16,13 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
+################################# Sensors ############################################
 
-    <90712eaa-de23-11ef-9103-90658429fd42> rdf:type sosa:Procedure ;
-        
-            sosa:isImplementedBy <90712ad6-de23-11ef-9103-90658429fd42> ; 
-        
-            sosa:isImplementedBy <90712b08-de23-11ef-9103-90658429fd42> ; 
-        
-        rdfs:label "workflow 1 (genomic)" .
+
+    <abromics:e5b69836-a7ec-11ef-8da8-90658429fd42> rdf:type sosa:Sensor ;
+        rdfs:label "Illumina HiSeq 2000" ;
+        sosa:isHostedBy <abromics:e5b696ce-a7ec-11ef-8da8-90658429fd42> .
+
+    <abromics:e5b698c2-a7ec-11ef-8da8-90658429fd42> rdf:type sosa:Sensor ;
+        rdfs:label "Illumina NextSeq 2000" ;
+        sosa:isHostedBy <abromics:e5b696ce-a7ec-11ef-8da8-90658429fd42> .

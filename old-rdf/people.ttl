@@ -13,13 +13,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+################################## People #################################
 
 
-    <90712eaa-de23-11ef-9103-90658429fd42> rdf:type sosa:Procedure ;
-        
-            sosa:isImplementedBy <90712ad6-de23-11ef-9103-90658429fd42> ; 
-        
-            sosa:isImplementedBy <90712b08-de23-11ef-9103-90658429fd42> ; 
-        
-        rdfs:label "workflow 1 (genomic)" .
+    <abromics:e5b6a1f0-a7ec-11ef-8da8-90658429fd42> rdf:type prov:Person, prov:Agent ;
+        foaf:givenName "Claudine Médigue" ;
+        foaf:mbox <claudine.medigue@france-bioinformatique.fr> .

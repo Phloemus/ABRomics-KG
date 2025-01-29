@@ -6,29 +6,29 @@ PREFIX go: <http://purl.org/obo/owl/GO#>
 PREFIX schema: <https://schema.org/>
 PREFIX abromics: <https://abromics.fr/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
 
 # CQ1: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?
 
-SELECT ?sample_id ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {
+SELECT ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {
     ?sample rdf:type sio:001050 ;
-        schema:identifier ?sample_id ;
-        prov:atLocation ?location .
-
-    ?obs_prop rdf:type sosa:ObservableProperty ;
-        rdfs:label "Resistance gene" . 
-
-    ?observations sosa:hasObservableProperty ?obs_prop ;
-        sosa:hasFeatureOfInterest ?gene ;
-        sosa:hasFeatureOfInterest ?sample .
+            schema:identifier ?sample_id ;
+            prov:atLocation ?location .
+            
+    ?observations sosa:hasObservableProperty abromics:ABRGene ;
+            sosa:hasFeatwureOfInterest ?sample ; 
+            sosa:hasSimpleResult ?gene_name .
 
     ?gene rdf:type go:Gene ;
-        rdfs:label ?gene_name .
+            rdfs:label ?gene_name .
 
     # fetch the id corresponding to the targeted location
     SERVICE <https://query.wikidata.org/sparql> {
-        ?location rdfs:label ?location_name .
-        FILTER(?location_name = "France" && LANG(?location_name) = "en")
-   }
+            ?location wdt:P31 wd:Q6256 .
+            ?location rdfs:label ?location_name .
+            FILTER(?location_name = "France"@en)
+    }   
 } 
-GROUP BY ?sample_id ?gene_name ?location_name
+GROUP BY ?gene_name ?location_name
 ORDER BY DESC(?count)
