@@ -34,15 +34,6 @@ sparql.setReturnFormat(JSON)
 countries = readJsonFromFile("data/countries.json")
 
 
-#### Analytics #########################################################################################################
-
-if 'IS_PROD' in os.environ and os.environ['IS_PROD'] == "true":
-    html(
-        """
-            <script defer data-domain="10-54-1-56.gcp.glicid.fr" src="https://analytics.gingembre.org/js/script.js"></script>
-        """
-    )
-
 
 #### States ############################################################################################################
 
@@ -127,21 +118,20 @@ query1 = f"""
     
     # CQ1: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?
     
-    SELECT ?sample_id ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {{
+    SELECT ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {{
+
         ?sample rdf:type sio:001050 ;
             schema:identifier ?sample_id ;
             prov:atLocation ?location .
-    
-        ?obs_prop rdf:type sosa:ObservableProperty ;
-            rdfs:label "Resistance gene" . 
-    
-        ?observations sosa:hasObservableProperty ?obs_prop ;
-            sosa:hasFeatureOfInterest ?gene ;
-            sosa:hasFeatureOfInterest ?sample .
-    
-        ?gene rdf:type go:Gene ;
-            rdfs:label ?gene_name .
-    
+  
+        ?observations rdf:type sosa:Observation ;
+                      sosa:observedProperty <abromics:ABRgene> ;
+  	    			  sosa:hasFeatureOfInterest ?sample ;
+          			  sosa:hasSimpleResult ?gene_name .
+        
+  	    ?gene rdf:type go:Gene ;
+                rdfs:label ?gene_name .
+
         # fetch the id corresponding to the targeted location
         SERVICE <https://query.wikidata.org/sparql> {{
             ?location wdt:P31 wd:Q6256 .
@@ -149,7 +139,7 @@ query1 = f"""
             FILTER(?location_name = "{st.session_state.country}"@en)
        }}
     }}
-    GROUP BY ?sample_id ?gene_name ?location_name
+    GROUP BY ?gene_name ?location_name
     ORDER BY DESC(?count)
 """
 
@@ -166,28 +156,27 @@ query2 = f"""
     
     # What are actively circulating ABR genes, given a specific time-frame
     
-    SELECT ?gene_name (COUNT(DISTINCT ?res) as ?total_nb_occurences) WHERE {{
+    SELECT ?gene_name (COUNT(?gene_name) as ?total_nb_occurences) WHERE {{
         ?sample rdf:type sio:001050 ;
              prov:generatedAtTime ?collectedDate .
         FILTER (?collectedDate > "{st.session_state.startTime}T00:00:00Z"^^xsd:dateTime && 
            ?collectedDate < "{st.session_state.endTime}T00:00:00Z"^^xsd:dateTime)
     
-       ?observations sosa:hasObservableProperty ?obs_prop ;
-             sosa:hasFeatureOfInterest ?gene ;
+        ?observations sosa:observedProperty <abromics:ABRgene> ;
              sosa:hasFeatureOfInterest ?sample ;
-             sosa:hasSimpleResult ?res .
-    
-       ?obs_prop rdf:type sosa:ObservableProperty ;
-             rdfs:label "Resistance gene" .
+             sosa:hasSimpleResult ?gene_name .
     
        ?gene rdf:type go:Gene ;
              rdfs:label ?gene_name .
     }} 
-    GROUP BY ?gene_name ?res
+    GROUP BY ?gene_name 
     ORDER BY DESC(?total_nb_occurences)
 """
 
 query3 = f"""
+    ## Warning:
+    ## This request needs a rework
+    ##
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -210,7 +199,7 @@ query3 = f"""
         ?gene rdf:type go:Gene ;
             rdfs:label ?gene_name .
                     
-        ?observations sosa:hasObservableProperty ?obs_prop ;
+        ?observations sosa:observedProperty ?obs_prop ;
             sosa:hasFeatureOfInterest ?gene ;
             sosa:hasFeatureOfInterest ?sample ;
             sosa:hasResult/sosa:hasSimpleResult ?res .
@@ -370,10 +359,13 @@ st.markdown(
 st.markdown('<a id="kg-structure"></a>', unsafe_allow_html=True)
 st.header("2. Knowledge graph structure")
 
-st.image("assets/figure-1.png", caption="RDF instances for the sample metadata")
+st.markdown("")
 
-st.image("assets/figure-2.png", caption="RDF instances for the data analysis results")
+st.image("assets/Figure-1.png", caption="RDF instances for the sample metadata")
 
+st.markdown("")
+
+st.image("assets/Figure-2.png", caption="RDF instances for the data analysis results")
 
 st.markdown('<a id="demo-queries"></a>', unsafe_allow_html=True)
 st.header("3. Execute demo queries")
@@ -564,3 +556,17 @@ ANR-21-ESRE-0048. Part of this work was carried out within the IBD-NExT cluster 
 from the “France 2030” plan and financial support from the Pays de la Loire Region and Nantes
 Métropole.""")
 st.image("assets/logo-abromics.png")
+
+
+#### Analytics #########################################################################################################
+
+if 'IS_PROD' in os.environ and os.environ['IS_PROD'] == "true":
+    st.markdown(os.environ['IS_PROD'])
+    html(
+        """
+            <script defer data-domain="10-54-1-56.gcp.glicid.fr" src="https://analytics.gingembre.org/js/script.js"></script>
+        """
+    )
+
+
+
