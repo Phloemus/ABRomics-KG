@@ -10,13 +10,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 # What are actively circulating ABR genes, given a specific time-frame
 
-SELECT ?gene_name (COUNT(DISTINCT ?gene_name) as ?total_nb_occurences) WHERE {
+SELECT ?gene_name (COUNT(?gene_name) as ?total_nb_occurences) WHERE {
     ?sample rdf:type sio:001050 ;
          prov:generatedAtTime ?collectedDate .
     FILTER (?collectedDate > "2010-10-23T00:00:00Z"^^xsd:dateTime && 
            ?collectedDate < "2024-10-23T00:00:00Z"^^xsd:dateTime)
 
-   ?observations sosa:hasObservableProperty abromics:ABRgene ;
+   ?observations sosa:observedProperty <abromics:ABRgene> ;
          sosa:hasFeatureOfInterest ?sample ;
          sosa:hasSimpleResult ?gene_name .
 
