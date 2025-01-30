@@ -119,19 +119,19 @@ query1 = f"""
     # CQ1: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?
     
     SELECT ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {{
+
         ?sample rdf:type sio:001050 ;
             schema:identifier ?sample_id ;
             prov:atLocation ?location .
-    
-        ?obs_prop rdf:type sosa:ObservableProperty ;
-            rdfs:label "Resistance gene" . 
-    
-        ?observations sosa:hasObservableProperty ?obs_prop ;
-            sosa:hasFeatureOfInterest ?sample .
-    
-        ?gene rdf:type go:Gene ;
-            rdfs:label ?gene_name .
-    
+  
+        ?observations rdf:type sosa:Observation ;
+                      sosa:observedProperty <abromics:ABRgene> ;
+  	    			  sosa:hasFeatureOfInterest ?sample ;
+          			  sosa:hasSimpleResult ?gene_name .
+        
+  	    ?gene rdf:type go:Gene ;
+                rdfs:label ?gene_name .
+
         # fetch the id corresponding to the targeted location
         SERVICE <https://query.wikidata.org/sparql> {{
             ?location wdt:P31 wd:Q6256 .
@@ -156,18 +156,15 @@ query2 = f"""
     
     # What are actively circulating ABR genes, given a specific time-frame
     
-    SELECT ?gene_name (COUNT(DISTINCT ?gene_name) as ?total_nb_occurences) WHERE {{
+    SELECT ?gene_name (COUNT(?gene_name) as ?total_nb_occurences) WHERE {{
         ?sample rdf:type sio:001050 ;
              prov:generatedAtTime ?collectedDate .
         FILTER (?collectedDate > "{st.session_state.startTime}T00:00:00Z"^^xsd:dateTime && 
            ?collectedDate < "{st.session_state.endTime}T00:00:00Z"^^xsd:dateTime)
     
-       ?observations sosa:hasObservableProperty ?obs_prop ;
+        ?observations sosa:observedProperty <abromics:ABRgene> ;
              sosa:hasFeatureOfInterest ?sample ;
              sosa:hasSimpleResult ?gene_name .
-    
-       ?obs_prop rdf:type sosa:ObservableProperty ;
-             rdfs:label "Resistance gene" .
     
        ?gene rdf:type go:Gene ;
              rdfs:label ?gene_name .
@@ -177,6 +174,9 @@ query2 = f"""
 """
 
 query3 = f"""
+    ## Warning:
+    ## This request needs a rework
+    ##
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -199,7 +199,7 @@ query3 = f"""
         ?gene rdf:type go:Gene ;
             rdfs:label ?gene_name .
                     
-        ?observations sosa:hasObservableProperty ?obs_prop ;
+        ?observations sosa:observedProperty ?obs_prop ;
             sosa:hasFeatureOfInterest ?gene ;
             sosa:hasFeatureOfInterest ?sample ;
             sosa:hasResult/sosa:hasSimpleResult ?res .
@@ -359,10 +359,13 @@ st.markdown(
 st.markdown('<a id="kg-structure"></a>', unsafe_allow_html=True)
 st.header("2. Knowledge graph structure")
 
-st.image("assets/figure-1.png", caption="RDF instances for the sample metadata")
+st.markdown("")
 
-st.image("assets/figure-2.png", caption="RDF instances for the data analysis results")
+st.image("assets/Figure-1.png", caption="RDF instances for the sample metadata")
 
+st.markdown("")
+
+st.image("assets/Figure-2.png", caption="RDF instances for the data analysis results")
 
 st.markdown('<a id="demo-queries"></a>', unsafe_allow_html=True)
 st.header("3. Execute demo queries")
