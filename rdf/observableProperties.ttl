@@ -17,7 +17,7 @@
 ################################## Observable Properties #################################
 
 
-    abromics:ABRgene rdf:type sosa:ObservableProperty ;
+    <abromics:ABRgene> rdf:type sosa:ObservableProperty ;
         rdfs:label "Resistance gene" .
 
     <abromics:9071388c-de23-11ef-9103-90658429fd42> rdf:type sosa:ObservableProperty ;
