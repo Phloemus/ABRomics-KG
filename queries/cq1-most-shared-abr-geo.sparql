@@ -16,7 +16,7 @@ SELECT ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {
             schema:identifier ?sample_id ;
             prov:atLocation ?location .
             
-    ?observations sosa:hasObservableProperty abromics:ABRGene ;
+    ?observations sosa:hasObservableProperty <abromics:ABRGene> ;
             sosa:hasFeatwureOfInterest ?sample ; 
             sosa:hasSimpleResult ?gene_name .
 
