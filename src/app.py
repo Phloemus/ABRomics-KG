@@ -125,7 +125,7 @@ query1 = f"""
             prov:atLocation ?location .
   
         ?observations rdf:type sosa:Observation ;
-                      sosa:observedProperty abromics:ABRgene ;
+                      sosa:observedProperty <abromics:ABRgene> ;
   	    		sosa:hasFeatureOfInterest ?sample ;
           		sosa:hasSimpleResult ?gene_name .
         
