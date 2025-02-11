@@ -125,12 +125,12 @@ query1 = f"""
             prov:atLocation ?location .
   
         ?observations rdf:type sosa:Observation ;
-                      sosa:observedProperty <abromics:ABRgene> ;
-  	    			  sosa:hasFeatureOfInterest ?sample ;
-          			  sosa:hasSimpleResult ?gene_name .
+                      sosa:observedProperty abromics:ABRgene ;
+  	    		sosa:hasFeatureOfInterest ?sample ;
+          		sosa:hasSimpleResult ?gene_name .
         
-  	    ?gene rdf:type go:Gene ;
-                rdfs:label ?gene_name .
+  	?gene rdf:type go:Gene ;
+            rdfs:label ?gene_name .
 
         # fetch the id corresponding to the targeted location
         SERVICE <https://query.wikidata.org/sparql> {{
@@ -221,6 +221,11 @@ queryMetrics = f"""
       FILTER NOT EXISTS {{ ?observableProperty rdf:type go:Gene . }}
     }}
 """
+
+customqry = """SELECT (COUNT(*) AS ?tripleCount)
+WHERE {{
+    ?subject ?predicate ?object.
+}}"""
 
 #### States modifier function ##########################################################################################
 
@@ -557,11 +562,22 @@ from the “France 2030” plan and financial support from the Pays de la Loire 
 Métropole.""")
 st.image("assets/logo-abromics.png")
 
+#### Custom query editor ###############################################################################################
+if 'IS_PROD' in os.environ and os.environ['IS_PROD'] == "false":
+    st.subheader(
+        "Custom query"
+    )
+    st.markdown(f"""
+        Allow to write custom queries but you won't be able to execute them, it's just to write the query in a nice 
+        looking format. 
+    """)
+    st.code(customqry, language="sparql", line_numbers=False)
+
 
 #### Analytics #########################################################################################################
 
 if 'IS_PROD' in os.environ and os.environ['IS_PROD'] == "true":
-    st.markdown(os.environ['IS_PROD'])
+    # st.markdown(os.environ['IS_PROD'])
     html(
         """
             <script defer data-domain="10-54-1-56.gcp.glicid.fr" src="https://analytics.gingembre.org/js/script.js"></script>
