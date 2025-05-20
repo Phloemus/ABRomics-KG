@@ -7,7 +7,7 @@ Over the long run, we plan to integrate this knowledge graph to the [ABRomics](h
 
 ## Online demo
 
-Find the online demo of the ABRomics-kg and experiment the request detailed in the paper directly : [https://10.54.4.42.gcp.glicid.fr/](https://10.54.4.42.gcp.glicid.fr/)
+Find the online demo of the ABRomics-kg and experiment the request detailed in the paper directly : [https://10-54-4-42.gcp.glicid.fr/](https://10-54-4-42.gcp.glicid.fr/)
 Other queries may be added in this demo to illustrate the use of the knowledge graph for different usecases.
 
 ## Content
