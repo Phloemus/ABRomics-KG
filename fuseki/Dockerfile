@@ -9,7 +9,7 @@ RUN apk update && \
 # RUN mv apache-jena-fuseki-5.3.0 fuseki
 
 ## Trying to use geosparql with fuseki
-RUN wget https://repo1.maven.org/maven2/org/apache/jena/jena-fuseki-geosparql/5.2.0/jena-fuseki-geosparql-5.2.0.jar
+RUN curl https://repo1.maven.org/maven2/org/apache/jena/jena-fuseki-geosparql/5.2.0/jena-fuseki-geosparql-5.2.0.jar --output jena-fuseki-geosparql-5.2.0.jar
 RUN mkdir fuseki
 RUN mv jena-fuseki-geosparql-5.2.0.jar fuseki
 
