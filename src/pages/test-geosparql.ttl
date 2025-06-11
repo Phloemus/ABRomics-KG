@@ -1,0 +1,8 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ex: <http://example.org/> .
+
+ex:CenterOfNantes rdf:type geo:Point ;
+    geo:hasGeometry "POINT(-1.5536 47.2186)"^^geo:wktLiteral ; ## chatGPT says geo:hasGeometry but i doubt this as in the query there is asWKT written 
+    rdfs:label "Center of Nantes" .
