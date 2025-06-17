@@ -1,0 +1,58 @@
+@prefix ns1: <http://www.abromics.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> . 
+
+ns1:Metagenomic a sosa:FeatureOfInterest .
+
+ns1:sample1 a sosa:Sample ;
+    a sosa:Result ;
+    a ssn:Input ;
+    rdfs:label "file R1"^^xsd:string ;
+    sosa:isSampleOf ns1:Metagenomic .
+
+ns1:sample2 a sosa:Sample ;
+    a sosa:Result ;
+    a ssn:Input ;
+    rdfs:label "file R2"^^xsd:string ;
+    sosa:isSampleOf ns1:Metagenomic .
+
+ns1:sample3 a sosa:Sample ;
+    a sosa:Result ;
+    sosa:isResultOf ns1:sampling1 ;
+    rdfs:label "sample result of the workflow 1"^^xsd:string .
+
+ns1:workflow1 a sosa:Procedure ;
+    sosa:hasInput ns1:sample1 ;
+    sosa:hasInput ns1:sample2 ;
+    sosa:hasOutput ns1:report1 ;
+    ssn:isImplementedBy ns1:sampling1 .
+
+ns1:sampling1 a sosa:Sampling ;
+    ssn:implementsOnly ns1:workflow1 ;
+    sosa:madeBySampler ns1:sample1 ;
+    sosa:hasResult ns1:sample3 .
+
+ns1:sampler1 a sosa:Sampler ;
+    sosa:usedProcedure ns1:workflow1 ;
+    sosa:madeSampling ns1:sampling1 .
+
+ns1:report1 a sosa:Output ;
+    prov:wasGeneratedBy ns1:sampling1 ;
+    ns1:contains ns1:resistanceGene1 ;
+    ns1:contains ns1:targetAntibiotic1 .
+
+ns1:resistanceGene1 a aro:aadA13 ;
+    rdfs:label "aadA13 resistance gene"^^xsd:string .
+    # Link to ARO an inclusion of ARO ontology to get all the informations about this class and its parent
+    
+ns1:targetAntibiotic1 a aro:streptomycin ;
+    rdfs:label "streptomycin resistance gene"^^xsd:string .    
+
+
+
+    

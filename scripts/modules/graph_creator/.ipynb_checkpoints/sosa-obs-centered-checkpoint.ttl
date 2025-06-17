@@ -1,0 +1,141 @@
+@prefix ns1: <http://www.abromics.org/ontology/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+## include an other sample tomorrow
+ns1:sample1 a sosa:Sample .
+
+ns1:resistanceGene a sosa:ObservableProperty .
+ns1:targetAntibiotic a sosa:ObservableProperty .
+
+ns1:procedure1 a sosa:Procedure .
+
+ns1:workflow1 a sosa:Sensor .
+
+## The columns don't represent a strain
+## Genomic -> the link between the resistance and the bacterias present is not yet present in the report
+## For now we will assume that all the resistance gene and target antibiotic comes from a single strain
+
+ns1:strain1 a sosa:FeatureOfInterest .
+
+## Observations for resistance gene
+ns1:obs1 a sosa:Observation ;
+    sosa:resultTime "2024-04-11T15:31:10-05:00"^^xsd:dateTime ;
+    sosa:hasResult ns1:result1 ;
+    sosa:observedProperty ns1:resistanceGene ;
+    sosa:usedProcedure ns1:procedure1 ;
+    sosa:madeBySensor ns1:workflow1 ;
+    sosa:hasFeatureOfInterest ns1:strain1 ;
+
+ns1:obs2 a sosa:Observation ;
+    sosa:resultTime "2024-04-11T15:31:10-05:00"^^xsd:dateTime ;
+    sosa:hasResult ns1:result2 ;
+    sosa:observedProperty ns1:resistanceGene ;
+    sosa:usedProcedure ns1:procedure1 ;
+    sosa:madeBySensor ns1:workflow1 ;
+    sosa:hasFeatureOfInterest ns1:strain1 ;
+
+ns1:obs3 a sosa:Observation ;
+    sosa:resultTime "2024-04-11T15:31:10-05:00"^^xsd:dateTime ;
+    sosa:hasResult ns1:result3 ;
+    sosa:observedProperty ns1:resistanceGene ;
+    sosa:usedProcedure ns1:procedure1 ;
+    sosa:madeBySensor ns1:workflow1 ;
+    sosa:hasFeatureOfInterest ns1:strain1 ;
+
+ns1:obs4 a sosa:Observation ;
+    sosa:resultTime "2024-04-11T15:31:10-05:00"^^xsd:dateTime ;
+    sosa:hasResult ns1:result4 ;
+    sosa:observedProperty ns1:resistanceGene ;
+    sosa:usedProcedure ns1:procedure1 ;
+    sosa:madeBySensor ns1:workflow1 ;
+    sosa:hasFeatureOfInterest ns1:strain1 ;
+
+## Observations for target antibiotic
+ns1:obs5 a sosa:Observation ;
+    sosa:resultTime "2024-04-11T15:31:10-05:00"^^xsd:dateTime ;
+    sosa:hasResult ns1:result5 ;
+    sosa:observedProperty ns1:targetAntibiotic ;
+    sosa:usedProcedure ns1:procedure1 ;
+    sosa:madeBySensor ns1:workflow1 ;
+    sosa:hasFeatureOfInterest ns1:strain1 ;
+
+ns1:obs6 a sosa:Observation ;
+    sosa:resultTime "2024-04-11T15:31:10-05:00"^^xsd:dateTime ;
+    sosa:hasResult ns1:result6 ;
+    sosa:observedProperty ns1:targetAntibiotic ;
+    sosa:usedProcedure ns1:procedure1 ;
+    sosa:madeBySensor ns1:workflow1 ;
+    sosa:hasFeatureOfInterest ns1:strain1 ;
+
+ns1:obs7 a sosa:Observation ;
+    sosa:resultTime "2024-04-11T15:31:10-05:00"^^xsd:dateTime ;
+    sosa:hasResult ns1:result7 ;
+    sosa:observedProperty ns1:targetAntibiotic ;
+    sosa:usedProcedure ns1:procedure1 ;
+    sosa:madeBySensor ns1:workflow1 ;
+    sosa:hasFeatureOfInterest ns1:strain1 ;
+
+ns1:obs8 a sosa:Observation ;
+    sosa:resultTime "2024-04-11T15:31:10-05:00"^^xsd:dateTime ;
+    sosa:hasResult ns1:result8 ;
+    sosa:observedProperty ns1:targetAntibiotic ;
+    sosa:usedProcedure ns1:procedure1 ;
+    sosa:madeBySensor ns1:workflow1 ;
+    sosa:hasFeatureOfInterest ns1:strain1 ;
+
+## Observation results
+## The way to store the value and the unit inside of Result is not 
+## defined in the SOSA documentation
+ns1:result1 a sosa:Result ;
+    sosa:isResultOf ns1:obs1 ;
+    ns1:value "aadA13"^^xsd:string ;
+    ns1:unit "geneName"^^xsd:string .
+
+ns1:result2 a sosa:Result ;
+    sosa:isResultOf ns1:obs2 ;
+    ns1:value "ant(2'')-Ia"^^xsd:string ;
+    ns1:unit "geneName"^^xsd:string .
+
+ns1:result3 a sosa:Result ;
+    sosa:isResultOf ns1:obs3 ;
+    ns1:value "aph(3')-IIb"^^xsd:string ;
+    ns1:unit "geneName"^^xsd:string .
+
+ns1:result4 a sosa:Result ;
+    sosa:isResultOf ns1:obs4 ;
+    ns1:value "blaOXA-488"^^xsd:string ;
+    ns1:unit "geneName"^^xsd:string .
+
+ns1:result5 a sosa:Result ;
+    sosa:isResultOf ns1:obs5 ;
+    ns1:value "streptomycin"^^xsd:string ;
+    ns1:unit "antibiotic"^^xsd:string .
+
+ns1:result6 a sosa:Result ;
+    sosa:isResultOf ns1:obs6 ;
+    ns1:value "gentamicin"^^xsd:string ;
+    ns1:unit "antibiotic"^^xsd:string .
+
+ns1:result7 a sosa:Result ;
+    sosa:isResultOf ns1:obs7 ;
+    ns1:value "kanamycin"^^xsd:string ;
+    ns1:unit "antibiotic"^^xsd:string .
+
+ns1:result8 a sosa:Result ;
+    sosa:isResultOf ns1:obs8 ;
+    ns1:value "ampicillin"^^xsd:string ;
+    ns1:unit "antibiotic"^^xsd:string .
+    
+
+## The link between sample and observation doesn't exist in the 
+## documentation be carefull
+ns1:sample1 ns1:hasObservation ns1:obs1 ;
+    sosa:hasObservation ns1:obs2 ;
+    sosa:hasObservation ns1:obs3 ;
+    sosa:hasObservation ns1:obs4 ;
+    sosa:hasObservation ns1:obs5 ;
+    sosa:hasObservation ns1:obs6 ;
+    sosa:hasObservation ns1:obs7 ;
+    sosa:hasObservation ns1:obs8 ;
+

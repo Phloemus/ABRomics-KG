@@ -1,0 +1,909 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <https://schema.org/> .
+@prefix abromics: <https://abromics.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+################################### Samples #############################################
+
+# Samples refer as biological samples extracted from a patient of from 
+# a natural source (water or soil). They are subject to multiple observations.
+# Observations of the sample can be focused to a specific feature of contained
+# within the sample.
+
+###### Sample 1 
+<sample_1> rdf:type sosa:FeatureOfInterest ;
+        rdf:type sio:001050 ; ## annotation that indicates that this is a SAMPLE
+        schema:identifier "0001" ; 
+        abromics:collection_date "2023-02-03" ; 
+        abromics:has_latitude "98.877293" ; #! not present in the report 
+        abromics:has_longitude "45.874" ; #! not present in the report 
+        abromics:original_sample_id ;
+        abromics:microorganism_scientific_name: "Microorganism scientific name"
+2: "Collection date"
+3: "Sample type"
+4: "Sample source"
+5: "Host"
+6: "Country"
+7: "Sequencing technology"
+8: "Sequencing partner"
+9: "Submitter name"
+10: "Submitter email"
+
+###### Sample 1 
+<sample_2> rdf:type sosa:FeatureOfInterest ; 
+        rdf:type sio:001050 ;
+        schema:identifier "0002" ; 
+        abromics:collection_date "2023-02-04" ; 
+        abromics:has_latitude "100.877293" ; 
+        abromics:has_longitude "46.874" .
+
+
+################################  Observations #########################################
+
+# Observations are made by a workflow implementing a procedure. An observation
+# yield a measure (result) of multiple features of interest and a unique 
+# observable property. The main feature of interest is the sample but the 
+# observation is also focused on other features that are found within the 
+# sample like a strain or a gene for instance.
+# Those features of interest allow to filter the observations when quering 
+# the ABRomics knowledge graph
+
+###### Observation for the strain1 / sample 1 / name of the resistance genes
+<obs_s1_1> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_1> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r1> .
+
+<obs_s1_2> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_2> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r2> .
+
+<obs_s1_3> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_3> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r3> .
+
+<obs_s1_4> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_4> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r4> .
+
+<obs_s1_5> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_5> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r5> .
+
+<obs_s1_6> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_6> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r6> .
+
+###### Observations for the strain1 / sample 1 / coverage of the resistance genes
+<obs_s1_7> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_1> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r7> .
+
+<obs_s1_8> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_2> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r8> .
+
+<obs_s1_9> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_3> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r9> .
+
+<obs_s1_10> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_4> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r10> .
+
+<obs_s1_11> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_5> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r11> .
+
+<obs_s1_12> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_6> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r12> .
+
+###### Observations for the strain1 / sample 1 / antibiotic molecule
+<obs_s1_13> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_1> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRantibiotic> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r13> .
+
+<obs_s1_14> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_2> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRantibiotic> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r14> .
+
+<obs_s1_15> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_3> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRantibiotic> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r15> .
+
+<obs_s1_16> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_4> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRantibiotic> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r16> .
+
+<obs_s1_17> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_5> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRantibiotic> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r17> .
+
+<obs_s1_18> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_6> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRantibiotic> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r18> .
+
+###### Observation for the strain2 / sample 2 / name of the resistance genes
+<obs_s2_1> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_7> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r19> .
+
+<obs_s2_2> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_2> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r20> .
+
+<obs_s2_3> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_8> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r21> .
+
+<obs_s2_4> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_10> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r22> .
+
+<obs_s2_5> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_9> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r23> .
+
+<obs_s2_6> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_11> ;
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r24> .
+
+<obs_s2_7> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_3> ;
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r25> .
+
+<obs_s2_8> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_4> ;
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r26> .
+
+<obs_s2_9> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_6> ;
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r27> .
+
+<obs_s2_10> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_14> ;
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r28> .
+
+<obs_s2_11> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_12> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r29> .
+
+<obs_s2_12> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_13> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r30> .
+
+<obs_s2_13> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_5> ;
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r31> .
+
+###### Observation for the strain2 / sample 2 / name of the resistance genes
+<obs_s2_14> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_7> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r32> .
+
+<obs_s2_15> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_2> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r33> .
+
+<obs_s2_16> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_8> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r34> .
+
+<obs_s2_17> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_9> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r35> .
+
+<obs_s2_18> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_10> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r36> .
+
+<obs_s2_19> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_11> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r37> .
+
+<obs_s2_20> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_3> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r38> .
+
+<obs_s2_21> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_4> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r39> .
+
+<obs_s2_22> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_6> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r40> .
+
+<obs_s2_23> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_14> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r41> .
+
+<obs_s2_24> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_12> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r42> .
+
+<obs_s2_25> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_13> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r43> .
+
+<obs_s2_26> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_2> ; 
+        sosa:hasFeatureOfInterest <sample_2> ; 
+        sosa:hasFeatureOfInterest <gene_5> ; 
+        sosa:hasFeatureOfInterest <S2#location> ;
+        sosa:hasObservableProperty <ABRgenesCov> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r44> .
+
+
+############################# Results of Observations ######################################
+
+# The result entity allows to hold the value (the measure) of the observation.
+# A result also contains a unit that gives further informations about the 
+# observation made 
+
+###### Results for Observations with the strain1 / sample 1 / name of the resistance genes
+<r1> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "blaTEM-1A" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r2> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "tet(A)" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r3> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "sul1" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r4> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "qacE" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r5> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "dfrA1" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r6> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "aadA1" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+###### Results for Observations with the strain1 / sample 1 / coverage of resistance gene
+<r7> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r8> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "97.8"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r9> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "97.95"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r10> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "84.68"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r11> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r12> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "76.17"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+###### Results for Observations with the strain1 / sample 1 / antibiotic molecule
+<r13> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "ampicillin" ;
+        sosa:hasUnit "antibiotic" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r14> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "tetracycline" ;
+        sosa:hasUnit "antibiotic" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r15> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "sulfisoxazole" ;
+        sosa:hasUnit "antibiotic" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r16> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "unknown[qacE_1_X68232]" ;
+        sosa:hasUnit "antibiotic" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r17> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "trimethoprim" ;
+        sosa:hasUnit "antibiotic" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+<r18> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "streptomycin" ;
+        sosa:hasUnit "antibiotic" ; # in unit ontology ? 
+        sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
+
+###### Results for Observations with the strain1 / sample 1 / name of the resistance genes
+<r19> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "mcr-1.1" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r20> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "tet(A)" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r21> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "dfrA36" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r22> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "floR" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r23> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "sul2" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r24> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "aph(3')-Ia" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r25> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "sul1" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r26> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "qacE" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r27> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "aadA1" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r28> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "aph(6)-Id" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r29> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "aph(3'')-Ib" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r30> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "blaOXA-1" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r31> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "dfrA1" ;
+        sosa:hasUnit "Gene name" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+###### Results for Observations with the strain2 / sample 2 / coverage of resistance gene
+<r32> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r33> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r34> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r35> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r36> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "99.92"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r37> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "99.75"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r38> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r39> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "84.68"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r40> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "98.61"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r41> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r42> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r43> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+<r44> rdf:type sosa:Result ; 
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
+        sosa:hasUnit "percent" ; # in unit ontology ? 
+        sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
+
+
+############################# Results of Observations ######################################
+
+# The observable property define the meaning of what is the result of the 
+# observation is. The result should be the answer of the observable property
+# (ex: ObservableProperty:Height, Result:20m). Feature of interest and 
+# observable property have very close definitions, the only difference is that
+# the observation property is more precised than the feature of interest (which
+# have definitions that should fit to multiple observations of the SAME sample)
+
+###### Observation Property (the resistance gene name)
+<ABRgenes> rdf:type sosa:ObservableProperty ;
+        rdfs:label "Antibiotic resistant gene names"^^xsd:string .
+
+###### Observation Property (the resistance gene name)
+<ABRgenesCov> rdf:type sosa:ObservableProperty ;
+        rdfs:label "Antibiotic resistant gene coverage"^^xsd:string .
+
+<ABRantibiotic> rdf:type sosa:ObservableProperty ;
+        rdfs:label "Antibiotic name"^^xsd:string .
+
+
+############################### Sensors (workflows) #######################################
+
+# A sensor is a specification of a plan of execution. Corresponds to the code 
+# of a workflow
+abromics:WF1_impl rdf:type sosa:Sensor ; 
+        sosa:implements abromics:WF1_spec ;
+        sosa:isHostedBy abromics:NNCR .
+
+
+############################## Plateform (place) #########################################
+
+# In the context of the ABRomics project, a plateform is a physical location
+# that hosts the sensor that made an observation.
+abromics:NNCR rdf:type sosa:Platform .
+
+
+################################# Procedures  #############################################
+
+# The procedure is an implementation of a plan of execution (a sensor). Multiple
+# procedures coming from the same sensor can be performed at different time and 
+# at different locations.
+abromics:WF1_spec rdf:type sosa:Procedure ;
+        sosa:isImplementedBy abromics:WF1_impl .
+
+
+########################## Strain Feature of Interest ####################################
+
+# Strains can be seen a "sub features" present within a sample. It's defined as a 
+# sosa:FeatureOfInterest to allow filtration of the strain from sample observations
+# Inference of the knowledge found in all the observations linked to the strain directly 
+# to the strain class (resistance genes, resistance antibiotics..)
+
+####### Strain present in sample 1
+<strain_1> rdf:type sosa:FeatureOfInterest, 
+                    aro:Strain ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> ; #in_taxon E. Coli
+        aro:confers_resistance_to_antibiotic aro:ampicillin ; #! is_resistant_to_antibiotic seems much better
+        aro:confers_resistance_to_antibiotic aro:tetracycline ;
+        aro:confers_resistance_to_antibiotic aro:sulfisoxazole ;
+        aro:confers_resistance_to_antibiotic aro:trimethoprim ;
+        aro:confers_resistance_to_antibiotic aro:streptomycin .
+
+###### Strain present in sample 2
+<strain_2> rdf:type sosa:FeatureOfInterest, 
+                    aro:Strain ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> ; #in_taxon E. Coli
+        aro:confers_resistance_to_antibiotic aro:ampicillin ;
+        aro:confers_resistance_to_antibiotic aro:chloramphenicol ;
+        aro:confers_resistance_to_antibiotic aro:tcolistin ;
+        aro:confers_resistance_to_antibiotic aro:kanamycin ;
+        aro:confers_resistance_to_antibiotic aro:streptomycin ;
+        aro:confers_resistance_to_antibiotic aro:sulfisoxazole ;
+        aro:confers_resistance_to_antibiotic aro:tetracycline ;
+        aro:confers_resistance_to_antibiotic aro:trimethoprim .
+
+
+########################### Genes Feature of Interest ###################################
+
+# The gene is not always indicated as the feature of interest for an observation 
+# because the observation may not be focused on a specific gene. This feature of 
+# interest allows to target more specifically a gene but this field may be 
+# very verstile depending on the observation
+<gene_1> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ;
+        schema:identifier uniprot:blaTEM-1A ;
+        rdfs:label "blaTEM-1A" .
+
+<gene_2> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:tetA ; ##! problem with parenthesis in the real name of the gene: tet(A)
+        rdfs:label "tet(A)" .
+
+<gene_3> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:sul1 ;
+        rdfs:label "sul1" .
+
+<gene_4> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:qacE ;
+        rdfs:label "qacE" .
+
+<gene_5> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:dfrA1 ;
+        rdfs:label "dfrA1" .
+
+<gene_6> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:aadA1 ;
+        rdfs:label "aadA1" .
+
+<gene_7> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:mcr-1-1 ; ##! Cet identifiant va poser problème lors du parsing.. (mcr-1.1)
+        rdfs:label "mcr-1.1" .
+
+<gene_8> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:dfrA36 ;
+        rdfs:label "dfrA36" .
+
+<gene_9> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:sul2 ;
+        rdfs:label "sul2" .
+
+<gene_10> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:floR ;
+        rdfs:label "floR" .
+
+<gene_11> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:aph3-Ia ; ##! Cet identifiant va poser problème lors du parsing.. (aph(3')-Ia)
+        rdfs:label "aph(3')-Ia" .
+
+<gene_12> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:aph3-Ib ; ## Cet identifiant va poser problème lors du parsing.. (aph(3'')-Ib)
+        rdfs:label "aph(3'')-Ib" .
+
+<gene_13> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:blaOXA-1 ;
+        rdfs:label "blaOXA-1" .
+
+<gene_14> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:aph6-Id ; ## Cet identifiant va poser problème lors du parsing.. (aph(6)-Id)
+        rdfs:label "aph(6)-Id" .
+
+########################### Location Feature of Interest ################################
+        
+# The location of the sample is also a feature of interest, as we can consider that 
+# the location is a trait of a sample that can be observed only when the extraction
+# of the sample from is natural medium has been made.
+
+### Location for the sample 1
+<S1#location> rdf:type sosa:FeatureOfInterest ;
+  rdfs:label "location of S1"@en ;
+  geo:lat "35.8648067"^^xsd:decimal ;
+  geo:long "-120.6195831"^^xsd:decimal ;
+  geo:alt "12.75"^^xsd:decimal .
+
+### Location for the sample 2
+<S2#location> rdf:type sosa:FeatureOfInterest ;
+  rdfs:label "location of S2"@en ;
+  geo:lat "47.209110"^^xsd:decimal ;
+  geo:long "-1.553479"^^xsd:decimal ;
+  geo:alt "10.00"^^xsd:decimal .

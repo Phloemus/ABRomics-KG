@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.abromics.org/ontology/32f15c60-e120-11ee-9a92-90658429fd42> a <https://raw.githubusercontent.com/UKGovLD/publishing-statistical-data/master/specs/src/main/vocab/cube.ttlDataset> ;
+    rdfs:label "Analysis results report"^^xsd:string ;
+    dcterms:title "Analysis results report"^^xsd:string ;
+    rdfs:comment "Comments about the dataset"^^xsd:string .
+

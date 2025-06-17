@@ -1,0 +1,5 @@
+
+<http://www.abromics.org/ontology/52a2019e-e2bb-11ee-8edb-90658429fd42> a <https://bioportal.bioontology.org/ontologies/ARO/aadA13> .
+
+<http://www.abromics.org/ontology/52a2086a-e2bb-11ee-8edb-90658429fd42> a <https://bioportal.bioontology.org/ontologies/ARO/streptomycin> .
+

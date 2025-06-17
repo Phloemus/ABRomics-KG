@@ -1,0 +1,40 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <https://schema.org/> .
+@prefix abromics: <https://abromics.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix uniprot-core: <http://purl.uniprot.org/uniprot/core/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+################################## Samples ####################################
+
+{% for sample in samples %}
+    <abromics:{{ sample["id"] }}> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "{{ sample["originalSampleId"] }}" ;
+        obo:RO_0002162 <{{ sample["microorganism"] }}> ;
+        {% if sample["collectionDate"]|isDatetime %}
+            prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
+        {% endif %}
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "{{ sample["sampleType"] }}" ] ;
+
+        {% if sample["sampleSource"] != "" %}
+            prov:wasDerivedFrom [ rdf:type <{{sample["sampleSource"]}}> ] ;
+        {% else %}
+            prov:wasDerivedFrom <> ;
+        {% endif %}
+        uniprot-core:host <{{ sample["host"] }}> ;
+        prov:atLocation <{{ sample["country"] }}> ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "{{ sample["sequencingTechnology"] }}"  ] ;
+        abromics:sequencingPartner "{{ sample["sequencingPartner"] }}" ;
+        prov:wasAttributedTo <abromics:{{ sample["submitterId"] }}> . 
+{% endfor %}

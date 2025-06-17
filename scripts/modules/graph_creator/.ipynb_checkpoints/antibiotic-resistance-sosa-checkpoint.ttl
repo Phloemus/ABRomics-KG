@@ -1,0 +1,41 @@
+@prefix ns1: <http://www.abromics.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:d01d49e8-d164-11ee-b7a8-90658429fd42 a ns1:Genomic,
+        sosa:FeatureOfInterest ;
+    ns1:has ns1:d01d6dec-d164-11ee-b7a8-90658429fd42 ;
+    sosa:isFeatureOfInterest ns1:d01d44d4-d164-11ee-b7a8-90658429fd42 .
+
+ns1:d01d8aac-d164-11ee-b7a8-90658429fd42 a <http://purl.uniprot.org/core/Gene> ;
+    ns1:givesResistanceTo ns1:d01d82a0-d164-11ee-b7a8-90658429fd42 ;
+    skos:prefName "aadA13"^^xsd:string .
+
+ns1:d01d21b6-d164-11ee-b7a8-90658429fd42 a sosa:ObservableProperty ;
+    ns1:CollectedAt ns1:None ;
+    ns1:Host ns1:Other ;
+    ns1:Location ns1:None ;
+    ns1:MicroOrganism ns1:Achromobacter_xylosoxidans ;
+    ns1:SampleType ns1:environmental ;
+    ns1:SequencingPlatform ns1:454 ;
+    ns1:SequencingTechnology ns1:454_GS_20 ;
+    ns1:Source ns1:Other ;
+    ns1:SubmitterEmail <http://www.abromics.org/ontology/admin@analysis.abromics.fr> ;
+    ns1:SubmitterName ns1:Admin_Abromics .
+
+ns1:d01d44d4-d164-11ee-b7a8-90658429fd42 a sosa:Observation ;
+    sosa:ObservedProperty ns1:d01d21b6-d164-11ee-b7a8-90658429fd42 .
+
+ns1:d01d6dec-d164-11ee-b7a8-90658429fd42 a <https://bioportal.bioontology.org/ontologies/OHMI/HumanMicrobiome> ;
+    ns1:contains ns1:d01d7698-d164-11ee-b7a8-90658429fd42 .
+
+ns1:d01d7698-d164-11ee-b7a8-90658429fd42 a <https://bioportal.bioontology.org/ontologies/ARO/Strain> ;
+    ns1:MLSTProfile "MLST_profile"^^xsd:string ;
+    ns1:STProfile "ST_profile"^^xsd:string ;
+    ns1:isResistantTo ns1:d01d82a0-d164-11ee-b7a8-90658429fd42 .
+
+ns1:d01d82a0-d164-11ee-b7a8-90658429fd42 a <https://bioportal.bioontology.org/ontologies/ARO/Molecule> ;
+    rdfs:label "streptomycin"^^xsd:string .
+

@@ -1,0 +1,134 @@
+@prefix ns1: <http://www.abromics.org/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:dataStructureDefinition1 a qb:DataStructureDefinition ;
+    qb:Component ns1:component1 .
+
+ns1:geneResistanceDimensionProperty a qb:DimensionProperty ;
+    rdfs:label "Resistance Gene"^^xsd:string .
+
+ns1:targetAntibioticDimensionProperty a qb:DimensionProperty ;
+    rdfs:label "Target Antibiotic"^^xsd:string .
+
+ns1:resistanceGeneSlice a qb:Slice ;
+    rdfs:label "slice by resistance gene"^^xsd:string .
+    # link with ARO
+
+ns1:targetAntibioticSlice a qb:SliceKey ;
+    rdfs:label "slice by target antibiotic"^^xsd:string .
+
+ns1:wholeReportSlice a qb:Slice ;
+    qb:observation ns1:obs1,
+        ns1:obs2,
+        ns1:obs3,
+        ns1:obs3,
+        ns1:obs4,
+        ns1:obs5,
+        ns1:obs6,
+        ns1:obs7,
+        ns1:obs8,
+        ns1:obs9,
+        ns1:obs10,
+        ns1:obs11,
+        ns1:obs12,
+        ns1:obs13,
+        ns1:obs14,
+        ns1:obs15,
+        ns1:obs16,
+        ns1:obs17,
+        ns1:obs18,
+        ns1:obs19 ;
+    qb:sliceStructure ns1:resistanceGeneSlice .
+
+ns1:component1 qb:component ns1:geneResistanceDimensionProperty,
+        ns1:targetAntibioticDimensionProperty .
+
+ns1:obs1 a qb:Observation ;
+    rdfs:label "aadA13"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs2 a qb:Observation ;
+    rdfs:label "ant(2'')-Ia"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs3 a qb:Observation ;
+    rdfs:label "aph(3')-IIb"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs3 a qb:Observation ;
+    rdfs:label "blaOXA-488"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs4 a qb:Observation ;
+    rdfs:label "blaPAO"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs5 a qb:Observation ;
+    rdfs:label "catB7"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs6 a qb:Observation ;
+    rdfs:label "crpP"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs7 a qb:Observation ;
+    rdfs:label "fosA"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs8 a qb:Observation ;
+    rdfs:label "qacE"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs9 a qb:Observation ;
+    rdfs:label "sul1"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs10 a qb:Observation ;
+    rdfs:label "streptomycin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs11 a qb:Observation ;
+    rdfs:label "gentamicin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs12 a qb:Observation ;
+    rdfs:label "kanamycin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs13 a qb:Observation ;
+    rdfs:label "ampicillin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs14 a qb:Observation ;
+    rdfs:label "ampicillin,amoxicillin/clavulanicacid,cefoxitin,ceftriaxone"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs15 a qb:Observation ;
+    rdfs:label "chloramphenicol"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs16 a qb:Observation ;
+    rdfs:label "ciprofloxacinI/R"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs17 a qb:Observation ;
+    rdfs:label "fosfomycin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs18 a qb:Observation ;
+    rdfs:label "unknown[qacE_1_X68232]"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs19 a qb:Observation ;
+    rdfs:label "sulfisoxazole"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:reportDataset a qb:DataSet ;
+    rdfs:label "Analysis results report"^^xsd:string ;
+    dcterms:title "Analysis results report"^^xsd:string ;
+    qb:slice ns1:wholeReportSlice ;
+    qb:sliceKey ns1:targetAntibioticSlice ;
+    rdfs:comment "Comments about the dataset"^^xsd:string .
