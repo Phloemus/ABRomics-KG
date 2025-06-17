@@ -11,5 +11,5 @@ RUN pip install streamlit
 RUN pip install rdflib
 RUN pip install SPARQLWrapper
 
-CMD ["streamlit", "run", "app.py"]
+CMD ["streamlit", "run", "0-Home.py"]
 
