@@ -208,6 +208,9 @@ class GraphCreator:
     ## The response of the query doesn't seems to be right ..
     ## All the issues to create the query and now with the issue that seems to be caused by the format of the query 
     ## could be solved by getting the NCIT ontology directly onto the virtuoso server
+    ## 
+    ## This feature should be completed with the addition of UBERON and ENVO (inspired by the query that get a good list 
+    ## of sample sources)
     def __getSampleSources(self):
         for report in self.allReports:
             if report["sections"][0]["data"][0]["values"][5] not in self.sampleSources:
@@ -513,7 +516,8 @@ class GraphCreator:
 
                     self.observations.append({
                         "id": uniqueGraphId,
-                        "sample": sampleFeatureOfInterest,
+                        "sample": sampleFeatureOfInterest, ## legacy (no longer used but may be interesting with the changes in sosa ontolgy 
+                        "gene": geneFeatureOfInterest,
                         "observableProperty": observableProperty,
                         "sensor": sensor,
                         "procedure": procedure,

@@ -19,14 +19,14 @@
 ################################# Sensors ############################################
 
 
-    <abromics:0406b95c-4c88-11f0-b30a-90658429fd42> rdf:type sosa:Sensor ;
+    <abromics:53c5651e-4c89-11f0-9cd2-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "NextSeq 500" ;
-        sosa:isHostedBy <abromics:0406b88a-4c88-11f0-b30a-90658429fd42> .
+        sosa:isHostedBy <abromics:53c56460-4c89-11f0-9cd2-90658429fd42> .
 
-    <abromics:0406b9a2-4c88-11f0-b30a-90658429fd42> rdf:type sosa:Sensor ;
+    <abromics:53c5656e-4c89-11f0-9cd2-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina NextSeq 2000" ;
-        sosa:isHostedBy <abromics:0406b88a-4c88-11f0-b30a-90658429fd42> .
+        sosa:isHostedBy <abromics:53c56460-4c89-11f0-9cd2-90658429fd42> .
 
-    <abromics:0406ba74-4c88-11f0-b30a-90658429fd42> rdf:type sosa:Sensor ;
+    <abromics:53c56640-4c89-11f0-9cd2-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina HiSeq 2000" ;
-        sosa:isHostedBy <abromics:0406b88a-4c88-11f0-b30a-90658429fd42> .
+        sosa:isHostedBy <abromics:53c56460-4c89-11f0-9cd2-90658429fd42> .
