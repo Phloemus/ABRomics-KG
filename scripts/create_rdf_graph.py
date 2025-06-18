@@ -1,8 +1,11 @@
 import sys
+import os
+
 from modules.graph_creator.graph_creator import GraphCreator
 
-sys.path.append("modules/graph_creator")
+if not os.path.exists("data/rdf"):
+    os.makedirs("data/rdf")
 
-## THIS DIRECTORY DOESN'T SEEM TO EXIST... I don't know where python search the files 
-gc = GraphCreator("../../data/public-reports")
-gc.createGraph()
+gc = GraphCreator(reportDirectory = "data/public-reports", cacheDirectory = "data/cache")
+gc.createGraph(templatePath = "modules/graph_creator/", outputPath = "data/rdf")
+

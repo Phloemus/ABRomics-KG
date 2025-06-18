@@ -17,6 +17,6 @@
 ################################## People #################################
 
 
-    <abromics:e5b6a1f0-a7ec-11ef-8da8-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <abromics:90712f18-de23-11ef-9103-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "Claudine Médigue" ;
         foaf:mbox <claudine.medigue@france-bioinformatique.fr> .

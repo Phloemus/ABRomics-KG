@@ -18,8 +18,9 @@ from dotenv import load_dotenv # to read the environment variables from the .env
 ## Creator module class
 class GraphCreator:
 
-    def __init__(self, reportDirectory = "", sparqlEndpoint = ""):
+    def __init__(self, reportDirectory = "", cacheDirectory = "", sparqlEndpoint = ""):
         self.reportDirectory = reportDirectory
+        self.cacheDirectory = cacheDirectory
         self.sparqlEndpoint = sparqlEndpoint
         self.allReports = []
 
@@ -145,7 +146,7 @@ class GraphCreator:
                 self.countries[item["countryName"]["value"]] = item["countryId"]["value"] ## All countries are in self.countries now !
                 self.__writeCacheToJson(self.countries, "cache/countries.json")
         else:
-            self.countries = self.__readJsonFromFile("cache/countries.json")
+            self.countries = self.__readJsonFromFile(f"{self.cacheDirectory}/countries.json")
 
 
     ## Get the regions from wikidata
