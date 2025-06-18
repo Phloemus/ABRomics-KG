@@ -56,6 +56,9 @@ class GraphCreator:
         ## entities links
         self.samplesSubmitters = {}
 
+        ## many to many links
+        self.linksSamplesObservations = []
+
     ##### Private methods #####
 
     ## Return the dictionnary of the data corresponding to a given json file
@@ -477,6 +480,19 @@ class GraphCreator:
             reportId = reportId + 1
 
 
+    ## Add the links between the samples and the observations in a variable that will be used in 
+    ## the links_samples_observations.j2 jinja template
+    ## This function is very very inefficient.. but I had not enough time to make it efficient
+    def __addLinksSamplesObservations(self):
+        for sample in self.samples:
+            for observation in self.observations:
+                if observation["sample"] == sample["id"]: 
+                    self.linksSamplesObservations.append({
+                        "sample": sample["id"],
+                        "observation": observation["id"]
+                    })
+
+
     ##### Public test methods #####
 
     ## Checks if a region name is findable in the regions fetched from wikidata
@@ -523,6 +539,9 @@ class GraphCreator:
         self.__addSamples()
         self.__addObservations()
 
+        ## Add many to many links
+        self.__addLinksSamplesObservations()
+
         ## Creating the turtle file
         self.__createTtlFile(f"{templatePath}graph-templates/platforms.j2", outputPath, "platforms", self.platforms) 
         self.__createTtlFile(f"{templatePath}graph-templates/sensors.j2", outputPath, "sensors", self.sensors) 
@@ -533,6 +552,7 @@ class GraphCreator:
         self.__createTtlFile(f"{templatePath}graph-templates/genes.j2", outputPath, "genes", self.genes)
         self.__createTtlFile(f"{templatePath}graph-templates/samples.j2", outputPath, "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
         self.__createTtlFile(f"{templatePath}graph-templates/observations.j2", outputPath, "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
+        self.__createTtlFile(f"{templatePath}graph-templates/links_samples_observations.j2", outputPath, "linksSamplesObservations", self.linksSamplesObservations)
 
         ## Try to create the abromics data graph 
         create_graph_query = "CREATE GRAPH <http://data.abromics.fr>"

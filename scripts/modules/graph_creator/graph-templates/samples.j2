@@ -19,7 +19,7 @@
 ################################## Samples ####################################
 
 {% for sample in samples %}
-    <abromics:{{ sample["id"] }}> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <abromics:{{ sample["id"] }}> rdf:type prov:Entity, sio:001050 ;
         schema:identifier "{{ sample["originalSampleId"] }}" ;
         obo:RO_0002162 <{{ sample["microorganism"] }}> ;
         {% if sample["collectionDate"]|isDatetime %}
@@ -37,4 +37,5 @@
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "{{ sample["sequencingTechnology"] }}"  ] ;
         abromics:sequencingPartner "{{ sample["sequencingPartner"] }}" ;
         prov:wasAttributedTo <abromics:{{ sample["submitterId"] }}> . 
+
 {% endfor %}

@@ -17,18 +17,18 @@
 ################################## People #################################
 
 
-    <abromics:44c41356-4c4f-11f0-ad5a-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <abromics:fe362c72-4c7a-11f0-91fa-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "pglaser@pasteur.fr" ;
         foaf:mbox <> .
 
-    <abromics:44c413c4-4c4f-11f0-ad5a-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <abromics:fe362ccc-4c7a-11f0-91fa-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "claudine.medigue@france-bioinformatique.fr" ;
         foaf:mbox <> .
 
-    <abromics:44c41662-4c4f-11f0-ad5a-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <abromics:fe362f38-4c7a-11f0-91fa-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "None" ;
         foaf:mbox <> .
 
-    <abromics:44c417fc-4c4f-11f0-ad5a-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <abromics:fe3630dc-4c7a-11f0-91fa-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "brieuc.quemeneur@univ-nantes.fr" ;
         foaf:mbox <> .

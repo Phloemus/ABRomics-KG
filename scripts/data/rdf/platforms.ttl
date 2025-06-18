@@ -16,4 +16,4 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    <abromics:44c4097e-4c4f-11f0-ad5a-90658429fd42> rdf:type sosa:Platform .
+    <abromics:fe36245c-4c7a-11f0-91fa-90658429fd42> rdf:type sosa:Platform .

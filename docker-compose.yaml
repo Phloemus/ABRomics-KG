@@ -34,7 +34,7 @@ services:
       - GRAPH_URL=${GRAPH_URL}
       - IS_PROD=${IS_PROD}
     volumes:
-      - ./src/app.py:/src/0-Home.py
+      - ./src/0-Home.py:/src/0-Home.py
       - ./src/pages:/src/pages
       - ./src/.streamlit:/src/.streamlit
       - ./src/data:/src/data
