@@ -18,7 +18,7 @@
 ################################## Observable Properties #################################
 
 {% for gene in genes %}
-    <abromics:{{ gene["id"] }}> rdf:type sosa:ObservableProperty ;
-        rdf:type ncit:C16612 ;
+    <abromics:{{ gene["id"] }}> rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <{{ gene["aroClass"] }}> ;
         rdfs:label "{{ gene["label"] }}" .
 {% endfor %}

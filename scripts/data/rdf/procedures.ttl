@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix aro: <http://purl.obolibrary.org/obo/ARO_> .
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -16,12 +16,12 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    <fe362be6-4c7a-11f0-91fa-90658429fd42> rdf:type sosa:Procedure ;
+    <0406bf24-4c88-11f0-b30a-90658429fd42> rdf:type sosa:Procedure ;
         
-            sosa:isImplementedBy <fe36259c-4c7a-11f0-91fa-90658429fd42> ; 
+            sosa:isImplementedBy <0406b95c-4c88-11f0-b30a-90658429fd42> ; 
         
-            sosa:isImplementedBy <fe362614-4c7a-11f0-91fa-90658429fd42> ; 
+            sosa:isImplementedBy <0406b9a2-4c88-11f0-b30a-90658429fd42> ; 
         
-            sosa:isImplementedBy <fe362722-4c7a-11f0-91fa-90658429fd42> ; 
+            sosa:isImplementedBy <0406ba74-4c88-11f0-b30a-90658429fd42> ; 
         
         rdfs:label "workflow 1 (genomic)" .

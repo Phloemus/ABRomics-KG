@@ -42,6 +42,7 @@ class GraphCreator:
         self.regions = {}
         self.speciesTaxonomy = {}          # bind species with NCBI Taxon ontology terms
         self.sampleSourcesBindNCIT = {}    # bind sampleSources with NCIT terms
+        self.genesAroClasses = {}               # bind genes with ARO terms
 
         ## mappings help to track the link between entity from the reports and graph entities
         self.platformsMapping = {}
@@ -292,6 +293,47 @@ class GraphCreator:
             taxon = item["taxon"]["value"].split("http://purl.uniprot.org/taxonomy/")[1] 
             self.speciesTaxonomy[item["speciesName"]["value"]] = taxon
 
+    ## Get the list of the aro classes used for the genes
+    ## warning : need a server with the aro ontology indexed accessible to perform the sparql query..
+    def __getAroClasses(self):
+        genesNames = ""
+        genesNamesList = []
+        for report in self.allReports:
+            for genesName in report["sections"][2]["data"][0]["values"][0] + report["sections"][2]["data"][1]["values"][0]:
+                if genesName not in genesNamesList:
+                    genesNames += f""""{genesName}" """
+                    genesNamesList.append(genesName)
+        sparql_query = f""" 
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+            PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+            
+            SELECT ?class ?genesName
+            WHERE {{
+              VALUES ?genesName {{
+                  {genesNames}
+              }}
+              ?class rdfs:subClassOf+ aro:3000000 .
+              ?class rdfs:label ?label .
+              FILTER (lcase(str(?label)) = lcase(?genesName))
+            }}
+        """
+        print("Fetching ARO classes...")
+        print(sparql_query)
+        sparql = SPARQLWrapper("http://localhost:8081/sparql") ## This is in local : it's very baaad (but it has ARO indexed)
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(sparql_query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e:
+            print(e)
+        for item in recs:
+            self.genesAroClasses[item["genesName"]["value"]] = item["class"]["value"]
+            print(self.genesAroClasses)
+
+
+
     ## Add the plateforms (places where the workflows were performed)
     ############################################################################################################################################# REWORK THIS FUNCTION
     def __addProcedures(self):
@@ -383,9 +425,15 @@ class GraphCreator:
                 if gene not in self.genesMapping.keys():
                     uniqueGraphId = uuid.uuid1()
                     label = gene
+                    if label in self.genesAroClasses:
+                        aroClass = self.genesAroClasses[label]
+                    else:
+                        aroClass = ""
+
                     self.genes.append({
                         "id": uniqueGraphId,
-                        "label": label
+                        "label": label, 
+                        "aroClass": aroClass
                     })
                     self.genesMapping[label] = uniqueGraphId
 
@@ -527,6 +575,7 @@ class GraphCreator:
 
         self.__getSpeciesTaxonomy()
         self.__getSampleSources()
+        self.__getAroClasses()
 
         ## Adding entity data in memory 
         self.__addPlatforms()
