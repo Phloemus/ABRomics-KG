@@ -2,6 +2,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
 PREFIX go: <http://purl.org/obo/owl/GO#>
 PREFIX schema: <https://schema.org/>
 PREFIX abromics: <https://abromics.fr/>
@@ -9,7 +10,8 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX wd: <http://www.wikidata.org/entity/>
 
-# CQ1: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?
+# CQ1: What are the most represented antibiotic resistance genes 
+# in a specific geographical region of interest ?
 
 SELECT ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {
     ?sample rdf:type sio:001050 ;
@@ -17,13 +19,14 @@ SELECT ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {
             prov:atLocation ?location .
             
     ?observations sosa:hasObservableProperty <abromics:ABRGene> ;
-            sosa:hasFeatwureOfInterest ?sample ; 
+            sio:000332 ?sample ;
+            sosa:hasFeatureOfInterest ?gene ;
             sosa:hasSimpleResult ?gene_name .
 
-    ?gene rdf:type go:Gene ;
+    ?gene rdf:type ncit:C16612 ;
             rdfs:label ?gene_name .
 
-    # fetch the id corresponding to the targeted location
+    ## fetch the id corresponding to the targeted location
     SERVICE <https://query.wikidata.org/sparql> {
             ?location wdt:P31 wd:Q6256 .
             ?location rdfs:label ?location_name .
