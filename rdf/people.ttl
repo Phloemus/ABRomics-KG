@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix aro: <http://purl.obolibrary.org/obo/ARO_> .
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -17,18 +17,18 @@
 ################################## People #################################
 
 
-    <abromics:44c41356-4c4f-11f0-ad5a-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <abromics:53c56b72-4c89-11f0-9cd2-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "pglaser@pasteur.fr" ;
         foaf:mbox <> .
 
-    <abromics:44c413c4-4c4f-11f0-ad5a-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <abromics:53c56b9a-4c89-11f0-9cd2-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "claudine.medigue@france-bioinformatique.fr" ;
         foaf:mbox <> .
 
-    <abromics:44c41662-4c4f-11f0-ad5a-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <abromics:53c56cc6-4c89-11f0-9cd2-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "None" ;
         foaf:mbox <> .
 
-    <abromics:44c417fc-4c4f-11f0-ad5a-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <abromics:53c56d8e-4c89-11f0-9cd2-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "brieuc.quemeneur@univ-nantes.fr" ;
         foaf:mbox <> .
