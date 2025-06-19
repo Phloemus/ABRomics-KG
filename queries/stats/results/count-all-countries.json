@@ -1,0 +1,32 @@
+{ "head": {
+    "vars": [ "location" , "sampleCount" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "location": { "type": "uri" , "value": "http://www.wikidata.org/entity/Q31" } ,
+        "sampleCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "76" }
+      } ,
+      { 
+        "location": { "type": "uri" , "value": "http://www.wikidata.org/entity/Q183" } ,
+        "sampleCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "48" }
+      } ,
+      { 
+        "location": { "type": "uri" , "value": "http://www.wikidata.org/entity/Q36" } ,
+        "sampleCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "33" }
+      } ,
+      { 
+        "location": { "type": "uri" , "value": "http://www.wikidata.org/entity/Q142" } ,
+        "sampleCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "location": { "type": "uri" , "value": "http://www.wikidata.org/entity/Q213" } ,
+        "sampleCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "location": { "type": "uri" , "value": "http://www.wikidata.org/entity/Q781" } ,
+        "sampleCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      }
+    ]
+  }
+}

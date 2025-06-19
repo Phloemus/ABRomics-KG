@@ -1,0 +1,11 @@
+{ "head": {
+    "vars": [ "foiC16612Count" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "foiC16612Count": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "301" }
+      }
+    ]
+  }
+}

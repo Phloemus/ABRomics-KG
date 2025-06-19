@@ -1,0 +1,20 @@
+{ "head": {
+    "vars": [ "label" , "count" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "label": { "type": "literal" , "value": "animal" } ,
+        "count": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "117" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "environmental" } ,
+        "count": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "36" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "human" } ,
+        "count": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "11" }
+      }
+    ]
+  }
+}

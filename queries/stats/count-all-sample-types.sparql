@@ -1,0 +1,12 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+SELECT ?label (COUNT(DISTINCT ?sample) AS ?count)
+WHERE {
+  ?sample sio:000068 ?contextEntity .
+  ?contextEntity rdfs:label ?label .
+  FILTER(LCASE(STR(?label)) IN ("animal", "human", "environmental"))
+}
+GROUP BY ?label
+ORDER BY DESC(?count)

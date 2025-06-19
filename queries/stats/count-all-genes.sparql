@@ -1,0 +1,9 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>  # Adjust if different
+
+SELECT (COUNT(DISTINCT ?foi) AS ?foiC16612Count)
+WHERE {
+  ?foi rdf:type sosa:FeatureOfInterest .
+  ?foi rdf:type ncit:C16612 .
+}

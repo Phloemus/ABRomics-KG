@@ -1,0 +1,168 @@
+{ "head": {
+    "vars": [ "aroType" , "instanceCount" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_Strain" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "166" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3000165" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3000166" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3000230" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3000232" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3000410" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3000412" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3000413" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3000476" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3000566" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002528" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002533" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002540" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002576" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002602" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002605" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002621" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002639" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002641" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002655" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002660" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002676" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002683" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002693" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002705" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002718" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002790" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002854" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002858" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002859" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002860" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002861" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3002863" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3003014" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3003689" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3004623" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3005044" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3005113" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3005348" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "aroType": { "type": "uri" , "value": "http://purl.obolibrary.org/obo/ARO_3007387" } ,
+        "instanceCount": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      }
+    ]
+  }
+}

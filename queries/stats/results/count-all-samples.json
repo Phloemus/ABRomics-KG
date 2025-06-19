@@ -1,0 +1,11 @@
+{ "head": {
+    "vars": [ "si001050Count" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "si001050Count": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "164" }
+      }
+    ]
+  }
+}

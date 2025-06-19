@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix : <http://www.w3.org/ns/sparql-service-description#> .
+@prefix void_ext: <http://ldf.fi/void-ext#> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://localhost:3030/abromics-kg> a :Service;
+  :defaultDataset <http://localhost:3030/abromics-kg#sparql-default-dataset>;
+  :endpoint <http://localhost:3030/abromics-kg>;
+  :resultFormat formats:SPARQL_Results_CSV, formats:SPARQL_Results_JSON, formats:N-Triples,
+    formats:RDF_XML, formats:SPARQL_Results_TSV, formats:Turtle, formats:SPARQL_Results_XML;
+  :supportedLanguage :SPARQL11Query;
+  :feature :UnionDefaultGraph, :BasicFederatedQuery;
+  :availableGraphs <https://abromics.fr/#sparql-graph-collection> .
+
+<http://localhost:3030/abromics-kg#sparql-default-dataset> a :Dataset;
+  :defaultGraph <https://abromics.fr/#sparql-default-graph> .
+
+<https://abromics.fr/#sparql-default-graph> a :Graph;
+  void:distinctObjects "2617"^^xsd:long;
+  void_ext:distinctLiterals "2416"^^xsd:long;
+  void_ext:distinctIRIReferenceObjects "201"^^xsd:long;
+  void:distinctSubjects "23190"^^xsd:long;
+  void_ext:distinctIRIReferenceSubjects "22761"^^xsd:long;
+  void_ext:distinctBlankNodeSubjects "429"^^xsd:long .

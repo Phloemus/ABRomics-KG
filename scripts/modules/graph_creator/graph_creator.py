@@ -401,6 +401,7 @@ class GraphCreator:
                 self.peopleMapping[name] = uniqueGraphId
 
     ## Add strains data to memory for graph creation
+    ## feature to check if there is already an identical strain is missing in this function
     def __addStrains(self):
         for report in self.allReports:
             uniqueGraphId = uuid.uuid1()
