@@ -18,7 +18,7 @@ WORKDIR /fuseki
 EXPOSE 3030
 
 ## Launch the fuseki server
-CMD ["./fuseki-server", "--file=/rdf/samples.ttl", "--file=/rdf/genes.ttl", "--file=/rdf/observations.ttl", "--file=/rdf/platforms.ttl", "--file=/rdf/strains.ttl", "--file=/rdf/observableProperties.ttl", "--file=/rdf/people.ttl", "--file=/rdf/procedures.ttl", "--file=/rdf/sensors.ttl", "/abromics-kg"]
+CMD ["./fuseki-server", "--file=/rdf/samples.ttl", "--file=/rdf/genes.ttl", "--file=/rdf/observations.ttl", "--file=/rdf/platforms.ttl", "--file=/rdf/strains.ttl", "--file=/rdf/observableProperties.ttl", "--file=/rdf/people.ttl", "--file=/rdf/procedures.ttl", "--file=/rdf/sensors.ttl", "--file=/rdf/linksSamplesObservations.ttl", "--file=/ontologies/aro.owl", "/abromics-kg"]
 
 ## Test geosparql
-# CMD ["java", "-jar", "jena-fuseki-geosparql-5.2.0.jar", "-rf", "/rdf/samples.ttl", "-rf", "/rdf/genes.ttl", "-rf", "/rdf/observations.ttl", "-rf", "/rdf/platforms.ttl", "-rf", "/rdf/strains.ttl", "-rf", "/rdf/observableProperties.ttl", "-rf", "/rdf/people.ttl", "-rf", "/rdf/procedures.ttl", "-rf", "/rdf/sensors.ttl", "-rf", "/rdf/geosparql-test.rdf", "/abromics-kg"]
+# CMD ["java", "-jar", "jena-fuseki-geosparql-5.2.0.jar", "-rf", "/rdf/samples.ttl", "-rf", "/rdf/genes.ttl", "-rf", "/rdf/observations.ttl", "-rf", "/rdf/platforms.ttl", "-rf", "/rdf/strains.ttl", "-rf", "/rdf/observableProperties.ttl", "-rf", "/rdf/people.ttl", "-rf", "/rdf/procedures.ttl", "-rf", "/rdf/sensors.ttl", "-rf", "--file=/rdf/linksSamplesObservations.ttl", "/rdf/geosparql-test.rdf", "/abromics-kg"]

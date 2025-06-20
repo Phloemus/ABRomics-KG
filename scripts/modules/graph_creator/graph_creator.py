@@ -537,13 +537,11 @@ class GraphCreator:
     ## the links_samples_observations.j2 jinja template
     ## This function is very very inefficient.. but I had not enough time to make it efficient
     def __addLinksSamplesObservations(self):
-        for sample in self.samples:
-            for observation in self.observations:
-                if observation["sample"] == sample["id"]: 
-                    self.linksSamplesObservations.append({
-                        "sample": sample["id"],
-                        "observation": observation["id"]
-                    })
+        for observation in self.observations:
+            self.linksSamplesObservations.append({
+                "sample": observation["sample"],
+                "observation": observation["id"]
+            })
 
 
     ##### Public test methods #####

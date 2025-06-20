@@ -18,7 +18,10 @@ SELECT ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {
             schema:identifier ?sample_id ;
             prov:atLocation ?location .
             
-    ?observations sosa:hasObservableProperty <abromics:ABRGene> ;
+    ?observableProperty rdf:type sosa:ObservableProperty ;
+            rdfs:label "Resistance gene" .
+
+    ?observations sosa:hasObservableProperty ?observableProperty ;
             sio:000332 ?sample ;
             sosa:hasFeatureOfInterest ?gene ;
             sosa:hasSimpleResult ?gene_name .
@@ -26,11 +29,11 @@ SELECT ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {
     ?gene rdf:type ncit:C16612 ;
             rdfs:label ?gene_name .
 
-    ## fetch the id corresponding to the targeted location
+    ### fetch the id corresponding to the targeted location
     SERVICE <https://query.wikidata.org/sparql> {
             ?location wdt:P31 wd:Q6256 .
             ?location rdfs:label ?location_name .
-            FILTER(?location_name = "France"@en)
+            FILTER(?location_name = "Belgium"@en)
     }   
 } 
 GROUP BY ?gene_name ?location_name

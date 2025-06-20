@@ -19,7 +19,7 @@
 ################################## Samples ####################################
 
 {% for sample in samples %}
-    <abromics:{{ sample["id"] }}> rdf:type prov:Entity, sio:001050 ;
+    <abromics:{{ sample["id"] }}> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "{{ sample["originalSampleId"] }}" ;
         obo:RO_0002162 <{{ sample["microorganism"] }}> ;
         {% if sample["collectionDate"]|isDatetime %}

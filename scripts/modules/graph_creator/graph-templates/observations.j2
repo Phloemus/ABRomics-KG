@@ -17,7 +17,7 @@
 ################################## Observable Properties #################################
 
 {% for observation in observations %}
-    <abromics:{{ observation["id"] }}> rdf:type sosa:Observation ;
+    <abromics:{{ observation["id"] }}> rdf:type sosa:Observation, sio:000000 ;
         sosa:hasFeatureOfInterest <abromics:{{ observation["gene"] }}> ;
         sosa:hasObservableProperty <abromics:{{ observation["observableProperty"] }}> ;
         prov:wasGeneratedBy <abromics:{{ observation["sensor"] }}> ;

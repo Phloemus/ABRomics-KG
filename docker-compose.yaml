@@ -21,6 +21,7 @@ services:
     build: ./fuseki
     volumes:
       - ./rdf:/rdf
+      - ./ontologies:/ontologies
     ports:
       - 3030:3030
     networks:

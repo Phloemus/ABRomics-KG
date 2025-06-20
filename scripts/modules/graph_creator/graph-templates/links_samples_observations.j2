@@ -2,5 +2,5 @@
 
 {% for link in linksSamplesObservations %}
     <abromics:{{ link["sample"] }}> sio:000629 <abromics:{{ link["observation"] }}> .
-    <abromics: {{ link["observation"] }}> sio:000332 <abromics:{{ link["sample"] }}> .
+    <abromics:{{ link["observation"] }}> sio:000332 <abromics:{{ link["sample"] }}> .
 {% endfor %}
