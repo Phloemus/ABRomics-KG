@@ -40,6 +40,8 @@ The main packages installed in this environments are :
 - sparql-wrapper (used to perform SPARQL queries on already existant SPARQL endpoint)
 - dotenv (for reading data provided by .env file. Mainly used to indicate where are the jinja template files used to create the knowledge graph)
 
+To get the full list of packages, you can check the **requirements.txt*
+
 ### Creating the environment
 
 ```
