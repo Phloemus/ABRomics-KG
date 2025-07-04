@@ -1,14 +1,12 @@
 # Setup scripts
 
-Before launching the knowledge graph we need to fetch data from a project, download the ontologies needed for the knowledge graph and to convert 
-the raw data from the project to a well structured graph in *rdf* format
+Before launching the knowledge graph we need to fetch data from the ABRomics platform, download the ontologies needed for the knowledge graph and to convert the raw data from the ABRomics to a well structured graph in **rdf** format
 
 >[Note]
 >These scripts download and format the data used for the demo of this project. You have to run them *BEFORE* launching the knowledge graph
 
-Representing multi-modal data using the *SOSA* ontology can be applied to any project involving entities being observed and multiple characteristic
-of that entity being measured. But for a demonstration purposes, the scripts in this directory will only download the public analysis reports of the
-[ABRomics plateform](https://abromics.fr) and perform the rdf conversion on these reports alone.
+Representing multi-modal data using the *SOSA* ontology can be applied to any project involving entities being observed and multiple characteristic of that entity being measured. 
+But for a demonstration purposes, the scripts in this directory will only download the public analysis reports of the [ABRomics plateform](https://abromics.fr) and perform the **rdf** conversion on these reports alone.
 
 ## Fast setup 
 
