@@ -15,8 +15,8 @@ conversion process to rdf works. But if you just want a fast way of installing e
 
 ```
 bash
-chmod +x auto_download.sh
-./auto_download.sh
+chmod +x auto_setup.sh
+./auto_setup.sh
 ```
 
 Afterwards, you are ready to launch the knowledge graph (see the [main readme file](https://github.com/Phloemus/ABRomics-KG/blob/main/README.md) for more info)

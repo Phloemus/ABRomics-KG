@@ -1,4 +1,4 @@
-###### Auto download ######
+###### Auto setup ######
 #
 # Download all the reports and all the ontologies
 # Also convert the raw reports to rdf files
@@ -10,7 +10,9 @@ python -m venv .venv
 
 pip install -r requirements.txt
 
-## Launching the setup scripts
+## Donwload the required documents
 python download_reports.py
-python download_ontologies.py
+bash download_ontologies.sh
+
+## Generate the rdf files from the ABRomics reports
 python create_rdf_graph.py
