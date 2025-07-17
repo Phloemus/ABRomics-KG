@@ -61,7 +61,7 @@ python download_reports.py
 
 ```
 bash
-python download_ontologies.py
+python download_ontologies.sh
 ```
 
 ### Creating the rdf files
