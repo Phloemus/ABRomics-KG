@@ -303,10 +303,17 @@ with st.sidebar:
     """
         1. [Dataset](#dataset)
         2. [Knowledge graph structure](#kg-structure)
+        3. [Ontologies documentation](#ontologies-doc)
         3. [Execute demo queries](#demo-queries)
             1. [Count query](#count-query)
             2. [Antibiotic resistances by country](#abr-country-query)
             3. [Antibiotic resistances in different timeframes](#abr-time-query)
+            4. [Ontology reasonning]()
+        4. [Biological use cases](#use-cases)
+            1. [Antibiotic resistance surveillance]()
+                1. [Genomic data]()
+                2. [Metagenomic data]()
+                3. [Environmental use case]()
     """
     )
 

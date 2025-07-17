@@ -99,7 +99,7 @@ pip install rdflib
 bash
 ## Launch the streamlit app
 cd src
-streamlit run app.py
+streamlit run 0-Home.py
 ```
 
 The demo is now disponible locally at [http://localhost:8501](http://localhost:8501)
