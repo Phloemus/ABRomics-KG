@@ -382,6 +382,16 @@ st.image("assets/data-modelisation-sosa.png", caption="RDF instances for the dat
 st.markdown('<a id="demo-queries"></a>', unsafe_allow_html=True)
 st.header("3. Execute demo queries")
 
+st.markdown("")
+
+st.markdown("""
+    1. [Count query](#count-query)
+    2. [Antibiotic resistances by country](#abr-country-query)
+    3. [Antibiotic resistances in different timeframes](#abr-time-query)
+""")
+
+st.markdown("")
+
 st.markdown(
     f"""The SPARQL request corresponding to the competency question of the reference paper can be executed
                 below on you the local graph containing the data. SPARQL requests corresponding to other competency 
