@@ -356,12 +356,12 @@ st.header("1. Dataset")
 
 st.markdown(
         """
-        The knowledge graph has been created using public Acinetobacter baumanii metadata and antibiotic resistance
+        The knowledge graph has been created using public metadata and antibiotic resistance
         analysis data from the [ABRomics](https://www.abromics.fr) plateform.
 
-        In total, The genomic sequences and metadata 
-        of 40 A. baumannii strains found in human, animal and environmental origins have been integrated and 
-        processed into the [ABRomics](https://www.abromics.fr) platform. The resulting 120 analysis reports 
+        The genomic sequences and metadata 
+        of multiple harmfull strains of bacterias found in human, animal and environmental origins have been integrated and 
+        processed into the [ABRomics](https://www.abromics.fr) platform. The resulting 1613 analysis reports 
         gather sample metadata as well as antibiotic resistance genes detected with the 
         [ABRomics](https://www.abromics.fr) bioinformatics workflows were then extracted and formated using 
         the graph structure described below.
@@ -373,11 +373,11 @@ st.header("2. Knowledge graph structure")
 
 st.markdown("")
 
-st.image("assets/Figure-1.png", caption="RDF instances for the sample metadata")
+st.image("assets/sample-modelisation-sosa.png", caption="RDF instances for the sample metadata")
 
 st.markdown("")
 
-st.image("assets/Figure-2.png", caption="RDF instances for the data analysis results")
+st.image("assets/data-modelisation-sosa.png", caption="RDF instances for the data analysis results")
 
 st.markdown('<a id="demo-queries"></a>', unsafe_allow_html=True)
 st.header("3. Execute demo queries")
