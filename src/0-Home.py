@@ -87,6 +87,13 @@ if "df_res_wikidatahealthqry" not in st.session_state:
     st.session_state.df_res_wikidatahealthqry = ""
 
 
+if "is_exec_qry4" not in st.session_state:
+    st.session_state.is_exec_qry4 = False
+
+if "df_res_qry4" not in st.session_state:
+    st.session_state.df_res_qry4 = ""
+
+
 #### Queries ###########################################################################################################
 
 countquery = f"""SELECT (COUNT(*) AS ?tripleCount)
@@ -335,6 +342,16 @@ def exec_qry2():
     except Exception as e:
         print(e)
     st.session_state.is_exec_qry2 = not st.session_state.is_exec_qry2
+
+def exec_qry4():
+    sparql.setQuery(query4)
+    try:
+        res = sparql.query().convert()
+        recs = res["results"]["bindings"]
+        st.session_state.df_res_qry4 = json_normalize(recs)
+    except Exception as e:
+        print(e)
+    st.session_state.is_exec_qry4 = not st.session_state.is_exec_qry4
 
 def exec_customqry():
     sparql.setQuery(customquery)
@@ -644,7 +661,7 @@ st.markdown(f"Find the ARO class of the tet(A) antibiotic present in the abromic
 
 st.button(
     "Execute query",
-    on_click=exec_qry2,
+    on_click=exec_qry4,
     key=4,
     type="primary",
     disabled=False,
@@ -661,12 +678,12 @@ with qryTab1:
     st.code(query4, language="sparql", line_numbers=False)
 
 with qryTab2:
-    if st.session_state.is_exec_qry2:
+    if st.session_state.is_exec_qry4:
         with st.spinner("Wait for it..."):
             time.sleep(2)
         st.success("Query performed correctly !")
-        print(st.session_state.df_res_qry2)
-        st.table(st.session_state.df_res_qry2)
+        print(st.session_state.df_res_qry4)
+        st.table(st.session_state.df_res_qry4)
     else:
         st.markdown("Execute the request to see the results !")
 
