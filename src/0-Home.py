@@ -109,6 +109,49 @@ query1 = f"""
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX sio: <http://semanticscience.org/resource/>
+    PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
+    PREFIX go: <http://purl.org/obo/owl/GO#>
+    PREFIX schema: <https://schema.org/>
+    PREFIX abromics: <https://abromics.fr/>
+    PREFIX prov: <http://www.w3.org/ns/prov#>
+    PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+    PREFIX wd: <http://www.wikidata.org/entity/>
+    
+    # CQ1: What are the most represented antibiotic resistance genes 
+    # in a specific geographical region of interest ?
+    
+    SELECT ?gene_name ?location_name (COUNT(?gene_name) as ?count) WHERE {{
+        ?sample rdf:type sio:001050 ;
+                schema:identifier ?sample_id ;
+                prov:atLocation ?location .
+                
+        ?observableProperty rdf:type sosa:ObservableProperty ;
+                rdfs:label "Resistance gene" .
+    
+        ?observations sosa:hasObservableProperty ?observableProperty ;
+                sio:000332 ?sample ;
+                sosa:hasFeatureOfInterest ?gene ;
+                sosa:hasSimpleResult ?gene_name .
+    
+        ?gene rdf:type ncit:C16612 ;
+                rdfs:label ?gene_name .
+    
+        ### fetch the id corresponding to the targeted location
+        SERVICE <https://query.wikidata.org/sparql> {{
+                ?location wdt:P31 wd:Q6256 .
+                ?location rdfs:label ?location_name .
+                FILTER(?location_name = "{st.session_state.country}"@en)
+        }}   
+    }} 
+    GROUP BY ?gene_name ?location_name
+    ORDER BY DESC(?count)   
+"""
+
+query1_old = f"""
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX sio: <http://semanticscience.org/resource/>
     PREFIX go: <http://purl.org/obo/owl/GO#>
     PREFIX schema: <https://schema.org/>
     PREFIX abromics: <https://abromics.fr/>
@@ -143,6 +186,7 @@ query1 = f"""
     ORDER BY DESC(?count)
 """
 
+## To update
 query2 = f"""
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -206,6 +250,28 @@ query3 = f"""
       
     }}
     ORDER BY DESC(?res)
+"""
+
+query4 = """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+    PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
+    
+    SELECT ?geneLabel ?antibiotics ?antibioticsLabel
+    WHERE {
+        ?gene rdf:type ncit:C16612 .
+        ?gene rdfs:label ?geneLabel .
+    
+        FILTER(STRSTARTS(STR(?geneLabel), "tet(A)"))
+    
+        ?gene rdf:type ?geneTypes .
+    
+        FILTER(STRSTARTS(STR(?geneTypes), "http://purl.obolibrary.org/obo/ARO_"))
+    
+        ?geneTypes aro:2000000 ?antibiotics .
+        ?antibiotics rdfs:label ?antibioticsLabel . 
+    }
 """
 
 queryMetrics = f"""
@@ -564,6 +630,48 @@ with qryTab2:
         st.markdown("Execute the request to see the results !")
 
 st.divider()
+
+
+### Query 4 ############################################################################################################
+
+
+st.markdown('<a id="aro-reasoning-query"></a>', unsafe_allow_html=True)
+st.subheader(
+    "External ontology reasoning"
+)
+
+st.markdown(f"Find the ARO class of the tet(A) antibiotic present in the abromics graph")
+
+st.button(
+    "Execute query",
+    on_click=exec_qry2,
+    key=4,
+    type="primary",
+    disabled=False,
+    use_container_width=False,
+)
+
+qryTab1, qryTab2 = st.tabs(["Sparql query", "Result table"])
+
+with qryTab1:
+    st.markdown(f"""
+        This SPARQL query shows how to resonate on external ontologies like ARO to perform search in the abromics 
+        knowledge graph.
+    """)
+    st.code(query4, language="sparql", line_numbers=False)
+
+with qryTab2:
+    if st.session_state.is_exec_qry2:
+        with st.spinner("Wait for it..."):
+            time.sleep(2)
+        st.success("Query performed correctly !")
+        print(st.session_state.df_res_qry2)
+        st.table(st.session_state.df_res_qry2)
+    else:
+        st.markdown("Execute the request to see the results !")
+
+st.divider()
+
 
 ## Footer 
 
