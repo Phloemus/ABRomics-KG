@@ -1,5 +1,11 @@
 import streamlit as st
 
+import os
+from rdflib import Graph, URIRef
+import networkx as nx
+import plotly.graph_objects as go
+
+
 st.set_page_config(
     page_title="ARBormics-KG Ontologies",
     layout="wide",
@@ -26,6 +32,124 @@ st.markdown("")
 
 st.header("Generic ontologies")
 st.markdown("")
+
+## Rendering the centrality of the ontologies used
+
+def get_namespace(uri):
+    if '#' in uri:
+        return uri.rsplit('#', 1)[0] + '#'
+    elif '_' in uri:
+        return uri.rsplit('_', 1)[0] + '_'
+    else:
+        return uri.rsplit('/', 1)[0] + '/'
+
+def parse_ontology(filepath):
+    g = Graph()
+    g.parse(filepath, format='xml')
+    print(len(g))
+    ## Find a way to get all the namespaces defined in the ontologies (incoming or out)
+    ## Parse the ontologies in a rdflib graph one by one 
+    ## Iterate through all the spo and count the number of times there is a link out and in to which namespace (Degree Centrality in the ref paper)
+
+    ##print(list(g)[:10])
+    ##for s, p, o in g: 
+    ##    print(s, "n--- ", p, "n------ ", o)
+    return g
+
+def get_ontology_iri(g):
+    for s in g.subjects(URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
+                        URIRef("http://www.w3.org/2002/07/owl#Ontology")):
+        return str(s)
+    return None
+
+def extract_used_namespaces(g):
+    used = set()
+    for s, p, o in g:
+        if isinstance(o, URIRef):
+            used.add(get_namespace(str(o)))
+    return used
+
+def build_and_display_dependency_graph():
+    ontologies = {}
+    graphs = {}
+    used_namespaces = {}
+
+    # Step 1: Parse all ontologies
+    for file in os.listdir("../ontologies/"):
+        if not file.endswith('.owl'):
+            continue
+        path = os.path.join("../ontologies/", file)
+        g = parse_ontology(path)
+        iri = get_ontology_iri(g)
+        if not iri:
+            continue
+        ns = get_namespace(iri)
+        print(ns)
+        ontologies[ns] = file
+        graphs[ns] = g
+        used_namespaces[ns] = extract_used_namespaces(g)
+
+    # Step 2: Build dependency graph
+    G = nx.DiGraph()
+
+    for src_ns, used_ns_set in used_namespaces.items():
+        for tgt_ns in ontologies:
+            if src_ns != tgt_ns and tgt_ns in used_ns_set:
+                G.add_edge(ontologies[src_ns], ontologies[tgt_ns])  # file names as nodes
+    print(G)
+
+    # Step 3: Display the networkx graph
+    '''
+    pos = nx.spring_layout(G)
+    edge_x = []
+    edge_y = []
+    for edge in G.edges():
+        x0, y0 = pos[edge[0]]
+        x1, y1 = pos[edge[1]]
+        edge_x += [x0, x1, None]
+        edge_y += [y0, y1, None]
+
+    edge_trace = go.Scatter(
+        x=edge_x, y=edge_y,
+        line=dict(width=1, color='#888'),
+        hoverinfo='none',
+        mode='lines')
+
+    node_x = []
+    node_y = []
+    node_text = []
+    for node in G.nodes():
+        x, y = pos[node]
+        node_x.append(x)
+        node_y.append(y)
+        node_text.append(str(node))
+
+    node_trace = go.Scatter(
+        x=node_x, y=node_y,
+        mode='markers+text',
+        hoverinfo='text',
+        marker=dict(
+            showscale=False,
+            color='skyblue',
+            size=20,
+            line_width=2),
+        text=node_text,
+        textposition="top center"
+    )
+
+    fig = go.Figure(data=[edge_trace, node_trace],
+                    layout=go.Layout(
+                        showlegend=False,
+                        hovermode='closest',
+                        margin=dict(b=20,l=5,r=5,t=40)))
+    st.plotly_chart(fig)
+    '''
+
+
+st.button('Build dependency graph', on_click=build_and_display_dependency_graph)
+
+
+## Displaying a large list of all the ontologies used in the knowledge graph
 
 col1, col2, col3, col4 = st.columns(4)
 
