@@ -17,6 +17,11 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 ################################## Samples ####################################
+## 
+## For the sample type we just use the ABRomics sample type (human, enviornmental, animal)
+## A subclass of the aro:3004532 (strain source) could be used instead -> clinical (humans), 
+## environmental, agricultural (animals)
+
 
 {% for sample in samples %}
     <abromics:{{ sample["id"] }}> rdf:type prov:Entity, sio:001050, sio:000000 ;
