@@ -17,7 +17,7 @@
 ################################## Strains #################################
 
 {% for strain in strains %}
-    <abromics:{{ strain["id"] }}> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+    <abromics:{{ strain["id"] }}> rdf:type sosa:FeatureOfInterest, aro:3004531;
         abromics:has_st "{{ strain["st"] }}" ;
         obo:RO_0002162 <{{ strain["taxonomy"] }}> .
 {% endfor %}
