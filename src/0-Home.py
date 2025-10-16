@@ -117,7 +117,6 @@ query1 = f"""
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX sio: <http://semanticscience.org/resource/>
     PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
-    PREFIX go: <http://purl.org/obo/owl/GO#>
     PREFIX schema: <https://schema.org/>
     PREFIX abromics: <https://abromics.fr/>
     PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -135,7 +134,7 @@ query1 = f"""
         ?observableProperty rdf:type sosa:ObservableProperty ;
                 rdfs:label "Resistance gene" .
     
-        ?observations sosa:hasObservableProperty ?observableProperty ;
+        ?observations sosa:observedProperty ?observableProperty ;
                 sio:000332 ?sample ;
                 sosa:hasFeatureOfInterest ?gene ;
                 sosa:hasSimpleResult ?gene_name .
@@ -193,13 +192,12 @@ query1_old = f"""
     ORDER BY DESC(?count)
 """
 
-## To update
 query2 = f"""
+    PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX sio: <http://semanticscience.org/resource/>
-    PREFIX go: <http://purl.org/obo/owl/GO#>
     PREFIX schema: <https://schema.org/>
     PREFIX abromics: <https://abromics.fr/>
     PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -210,14 +208,17 @@ query2 = f"""
     SELECT ?gene_name (COUNT(?gene_name) as ?total_nb_occurences) WHERE {{
         ?sample rdf:type sio:001050 ;
              prov:generatedAtTime ?collectedDate .
-        FILTER (?collectedDate > "{st.session_state.startTime}T00:00:00Z"^^xsd:dateTime && 
-           ?collectedDate < "{st.session_state.endTime}T00:00:00Z"^^xsd:dateTime)
+        FILTER (?collectedDate > "2010-07-06T00:00:00Z"^^xsd:dateTime && 
+           ?collectedDate < "2019-07-06T00:00:00Z"^^xsd:dateTime)
+      
+        ?observableProperty rdf:type sosa:ObservableProperty ;
+                rdfs:label "Resistance gene" .
     
-        ?observations sosa:observedProperty <abromics:ABRgene> ;
-             sosa:hasFeatureOfInterest ?sample ;
+        ?observations sosa:observedProperty ?observableProperty ;
+             sio:000332 ?sample ;
              sosa:hasSimpleResult ?gene_name .
     
-       ?gene rdf:type go:Gene ;
+        ?gene rdf:type ncit:C16612 ;
              rdfs:label ?gene_name .
     }} 
     GROUP BY ?gene_name 
@@ -276,13 +277,13 @@ query4 = """
     
         FILTER(STRSTARTS(STR(?geneTypes), "http://purl.obolibrary.org/obo/ARO_"))
     
-        ?geneTypes aro:2000000 ?antibiotics .
+        ?geneTypes aro:2000000 ?antibiotics . ## confers_resistance_to_antibiotic
         ?antibiotics rdfs:label ?antibioticsLabel . 
     }
 """
 
 queryMetrics = f"""
-    PREFIX go: <http://purl.org/obo/owl/GO#>
+    PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -291,7 +292,7 @@ queryMetrics = f"""
     WHERE {{
       ?observableProperty rdf:type sosa:ObservableProperty ;
       		rdfs:label ?observableMetricLabels
-      FILTER NOT EXISTS {{ ?observableProperty rdf:type go:Gene . }}
+      FILTER NOT EXISTS {{ ?observableProperty rdf:type ncit:C16612 . }}
     }}
 """
 
