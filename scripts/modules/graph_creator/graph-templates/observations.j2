@@ -19,7 +19,7 @@
 {% for observation in observations %}
     <abromics:{{ observation["id"] }}> rdf:type sosa:Observation, sio:000000 ;
         sosa:hasFeatureOfInterest <abromics:{{ observation["gene"] }}> ;
-        sosa:hasObservableProperty <abromics:{{ observation["observableProperty"] }}> ;
+        sosa:observedProperty <abromics:{{ observation["observableProperty"] }}> ;
         prov:wasGeneratedBy <abromics:{{ observation["sensor"] }}> ;
         {% if observation["sensor"] != "" %}sosa:madeBySensor <abromics:{{ observation["sensor"] }}> ;{% endif %}
         sosa:usedProcedure <abromics:{{ observation["procedure"] }}> ;
