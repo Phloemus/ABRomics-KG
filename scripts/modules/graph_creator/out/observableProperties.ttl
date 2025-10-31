@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix aro: <http://purl.obolibrary.org/obo/ARO_> .
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -17,35 +17,35 @@
 ################################## Observable Properties #################################
 
 
-    <abromics:fc71dc9e-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8c16-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Resistance gene" .
 
-    <abromics:fc71dca8-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8c2a-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Gene length" .
 
-    <abromics:fc71dcbc-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8c34-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Identity (%)" .
 
-    <abromics:fc71dcc6-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8c3e-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Coverage (%)" .
 
-    <abromics:fc71dcd0-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8c48-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Contig" .
 
-    <abromics:fc71dcda-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8c5c-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Start in contig" .
 
-    <abromics:fc71dce4-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8c66-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "End in contig" .
 
-    <abromics:fc71dcee-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8c84-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Strand" .
 
-    <abromics:fc71dcf8-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8c8e-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Antibiotic class" .
 
-    <abromics:fc71dd0c-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8ca2-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Target antibiotic" .
 
-    <abromics:fc71dd16-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:b28e8cac-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "# Accession" .

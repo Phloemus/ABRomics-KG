@@ -6,7 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix aro: <http://purl.obolibrary.org/obo/ARO_> .
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -19,10 +19,14 @@
 ################################# Sensors ############################################
 
 
-    <abromics:fc71d0e6-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Illumina HiSeq 2000" ;
-        sosa:isHostedBy <abromics:fc71d046-0e3e-11f0-aeb7-90658429fd42> .
+    <abromics:b28e74f6-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:Sensor ;
+        rdfs:label "NextSeq 500" ;
+        sosa:isHostedBy <abromics:b28e741a-4daf-11f0-b0a2-90658429fd42> .
 
-    <abromics:fc71d122-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:Sensor ;
+    <abromics:b28e755a-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina NextSeq 2000" ;
-        sosa:isHostedBy <abromics:fc71d046-0e3e-11f0-aeb7-90658429fd42> .
+        sosa:isHostedBy <abromics:b28e741a-4daf-11f0-b0a2-90658429fd42> .
+
+    <abromics:b28e7668-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:Sensor ;
+        rdfs:label "Illumina HiSeq 2000" ;
+        sosa:isHostedBy <abromics:b28e741a-4daf-11f0-b0a2-90658429fd42> .
