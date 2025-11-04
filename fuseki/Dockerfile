@@ -1,12 +1,12 @@
-FROM openjdk:19-jdk-alpine3.16
+FROM alpine:3.16
 
 RUN apk update && \
-    apk add tar curl
+    apk add tar curl openjdk17
 
 # Get the fuseki tools
-RUN curl -o apache-jena-fuseki-5.4.0.tar.gz https://dlcdn.apache.org/jena/binaries/apache-jena-fuseki-5.4.0.tar.gz
-RUN tar -xf apache-jena-fuseki-5.4.0.tar.gz
-RUN mv apache-jena-fuseki-5.4.0 fuseki
+RUN curl -o apache-jena-fuseki-3.7.0.tar.gz https://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-3.7.0.tar.gz
+RUN tar -xf apache-jena-fuseki-3.7.0.tar.gz
+RUN mv apache-jena-fuseki-3.7.0 fuseki
 
 ## Trying to use geosparql with fuseki
 #RUN curl https://repo1.maven.org/maven2/org/apache/jena/jena-fuseki-geosparql/5.2.0/jena-fuseki-geosparql-5.2.0.jar --output jena-fuseki-geosparql-5.2.0.jar
