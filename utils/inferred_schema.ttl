@@ -1,0 +1,165 @@
+@prefix ns1: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> a owl:Class .
+
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> a owl:Class .
+
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468> a owl:Class .
+
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> a owl:Class .
+
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> a owl:Class .
+
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> a owl:Class .
+
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> a owl:Class .
+
+<http://semanticscience.org/resource/000000> a owl:Class .
+
+<http://semanticscience.org/resource/001050> a owl:Class .
+
+rdfs:label a owl:AnnotationProperty ;
+    rdfs:comment ""@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+prov:atLocation a owl:ObjectProperty ;
+    rdfs:label "atLocation" ;
+    rdfs:comment "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>.",
+        "The Location of any resource."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( prov:Activity prov:Agent prov:Entity prov:InstantaneousEvent ) ] ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Location ;
+    prov:category "expanded" ;
+    prov:editorialNote "The naming of prov:atLocation parallels prov:atTime, and is not named prov:hadLocation to avoid conflicting with the convention that prov:had* properties are used on prov:Influence classes."@en,
+        "This property is not functional because the many values could be at a variety of granularies (In this building, in this room, in that chair)."@en ;
+    prov:inverse "locationOf" ;
+    prov:sharesDefinitionWith prov:Location .
+
+prov:generatedAtTime a owl:DatatypeProperty ;
+    rdfs:label "generatedAtTime" ;
+    rdfs:comment "The time at which an entity was completely created and is available for use."@en ;
+    rdfs:domain prov:Entity ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range xsd:dateTime ;
+    prov:category "expanded" ;
+    prov:component "entities-activities" ;
+    prov:editorialNote "It is the intent that the property chain holds: (prov:qualifiedGeneration o prov:atTime) rdfs:subPropertyOf prov:generatedAtTime."@en ;
+    prov:qualifiedForm prov:Generation,
+        prov:atTime .
+
+prov:wasAttributedTo a owl:ObjectProperty ;
+    rdfs:label "wasAttributedTo" ;
+    rdfs:comment "Attribution is the ascribing of an entity to an agent."@en ;
+    rdfs:domain prov:Entity ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Agent ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
+    owl:propertyChainAxiom ( prov:qualifiedAttribution prov:agent ) ;
+    prov:category "starting-point" ;
+    prov:component "agents-responsibility" ;
+    prov:definition "Attribution is the ascribing of an entity to an agent."@en ;
+    prov:inverse "contributed" ;
+    prov:qualifiedForm prov:Attribution,
+        prov:qualifiedAttribution .
+
+prov:wasDerivedFrom a owl:ObjectProperty ;
+    rdfs:label "wasDerivedFrom" ;
+    rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
+    rdfs:domain prov:Entity ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Entity ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
+    owl:propertyChainAxiom ( prov:qualifiedDerivation prov:entity ) ;
+    prov:category "starting-point" ;
+    prov:component "derivations" ;
+    prov:definition "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
+    prov:inverse "hadDerivation" ;
+    prov:qualifiedForm prov:Derivation,
+        prov:qualifiedDerivation .
+
+prov:wasGeneratedBy a owl:ObjectProperty ;
+    rdfs:label "wasGeneratedBy" ;
+    rdfs:domain prov:Entity ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+    rdfs:range prov:Activity ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
+    owl:propertyChainAxiom ( prov:qualifiedGeneration prov:activity ) ;
+    prov:category "starting-point" ;
+    prov:component "entities-activities" ;
+    prov:inverse "generated" ;
+    prov:qualifiedForm prov:Generation,
+        prov:qualifiedGeneration .
+
+sosa:Observation a owl:Class .
+
+sosa:hasFeatureOfInterest a owl:ObjectProperty ;
+    rdfs:label "has feature of interest"@en ;
+    ns1:domainIncludes sosa:Deployment,
+        sosa:Execution,
+        sosa:ExecutionCollection ;
+    ns1:rangeIncludes sosa:FeatureOfInterest ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/common/> ;
+    owl:inverseOf sosa:isFeatureOfInterestOf ;
+    skos:definition """
+  relation from an Execution or Deployment to its subject entity
+
+  i.e., from an Actuation to the entity whose property was modified;
+  from an Observation to the entity whose quality was observed;
+  from an act of Sampling to the entity that was sampled;
+  or from a Deployment to its target
+  """@en ;
+    skos:example "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight."@en ;
+    skos:scopeNote "This is the _proximate_ feature of interest, which may be a proxy entity such as a sample of the _ultimate_ feature of interest. Use `hasUltimateFeatureOfInterest` if the intention is to link to the _ultimate_ feature of interest. " .
+
+sosa:hasSimpleResult a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "has simple result"@en ;
+    ns1:domainIncludes sosa:Execution,
+        sosa:ExecutionCollection ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/common/> ;
+    skos:definition """
+  relation from an Execution to its value expressed as a literal
+
+  In the case of an Actuation, the result may be the value of the Property following the execution of the Procedure by the Actuator. 
+
+  In the case of an Observation, the result is the value of the Property produced by the execution of the Procedure by the Sensor. 
+  """@en ;
+    skos:example "For instance, the values 23 or true."@en ;
+    skos:note "This DatatypeProperty provides an alternative to hasResult, to be used only if the execution result can be expressed as a Literal"@en .
+
+sosa:resultTime a owl:DatatypeProperty ;
+    rdfs:label "result time"@en ;
+    ns1:domainIncludes sosa:Execution,
+        sosa:ExecutionCollection ;
+    rdfs:comment "The value would usually be encoded using xsd:dateTime xsd:date xsd:gYearMonth xsd:gYear"@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/common/> ;
+    skos:definition """
+  instant of time when the result of the Execution became available
+  """@en .
+
+sosa:usedProcedure a owl:ObjectProperty ;
+    rdfs:label "used procedure"@en ;
+    ns1:domainIncludes sosa:Execution,
+        sosa:ExecutionCollection ;
+    ns1:rangeIncludes sosa:Procedure ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/common/> ;
+    owl:inverseOf sosa:usedForExecution ;
+    skos:definition """
+  relation from an Execution or ExecutionCollection to a Procedure used to make it
+  """@en .
+
+<https://abromics.fr/ontology/abromics-kg-inferred-schema> a owl:Ontology ;
+    rdfs:label "ABRomics Knowledge Graph Inferred Schema" ;
+    rdfs:comment "This ontology represents the inferred schema from the ABRomics Knowledge Graph." ;
+    owl:versionInfo "Created on 2025-12-01" .
+
+prov:Entity a owl:Class .
+
